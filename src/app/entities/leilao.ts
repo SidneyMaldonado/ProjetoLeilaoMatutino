@@ -4,7 +4,7 @@ export interface Leilao {
     nome: string,
     descricao: string,
     data: Date,
-    ativo: Boolean
+    ativo: boolean
 
 }
 
