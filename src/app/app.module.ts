@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 <<<<<<< HEAD
 import { VendedorComponent } from './vendedor-listar/vendedor.component';
+import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
 =======
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 >>>>>>> 4480d1c0328fbc47e33b13ec257a431a7c8fa5ea
@@ -21,7 +22,8 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
     AnimalincluirComponent,
     RacaListarComponent,
 <<<<<<< HEAD
-    VendedorComponent
+    VendedorComponent,
+VendedorListarComponent
 =======
     LeilaoListarComponent
 >>>>>>> 4480d1c0328fbc47e33b13ec257a431a7c8fa5ea
