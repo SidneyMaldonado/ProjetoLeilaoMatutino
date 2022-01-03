@@ -8,16 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
 <<<<<<< HEAD
-import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
-=======
-import { RacaListarComponent } from './raca-listar/raca-listar.component';
 <<<<<<< HEAD
-import { VendedorComponent } from './vendedor-listar/vendedor.component';
-import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
+import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
+import { VendedorIncluirComponent } from './vendedor-incluir/vendedor-incluir.component';
 =======
+=======
+>>>>>>> 5ed6cd1a96b027be7a72b6593527482876489dbb
+import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
->>>>>>> 4480d1c0328fbc47e33b13ec257a431a7c8fa5ea
->>>>>>> b44025883c6138b1aec8a06cbf545d7105f1b6a8
+import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +24,15 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
     AnimalListarComponent,
     AnimalincluirComponent,
 <<<<<<< HEAD
-    CompradorListarComponent
-=======
-    RacaListarComponent,
 <<<<<<< HEAD
-    VendedorComponent,
-VendedorListarComponent
+    CompradorListarComponent,
+VendedorIncluirComponent
 =======
-    LeilaoListarComponent
->>>>>>> 4480d1c0328fbc47e33b13ec257a431a7c8fa5ea
->>>>>>> b44025883c6138b1aec8a06cbf545d7105f1b6a8
+=======
+>>>>>>> 5ed6cd1a96b027be7a72b6593527482876489dbb
+    RacaListarComponent,
+    LeilaoListarComponent,
+    CompradorListarComponent
   ],
   imports: [
     BrowserModule,

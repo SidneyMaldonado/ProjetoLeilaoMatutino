@@ -10,13 +10,12 @@ import { timeStamp } from 'console';
 })
 export class CompradorListarComponent implements OnInit {
 
-  compradores: Comprador[] = []
-  constructor( private servicoComprador: CompradorService) { }
-
+  compradores: Comprador[] = [];
+  constructor(private compradorService: CompradorService) { }
 
   ngOnInit(): void {
-    this.servicoComprador.listar().subscribe(
-      dados => this.compradores = dados
+    this.compradorService.listar().subscribe(
+      dados=> this.compradores = dados
     )
   }
 
