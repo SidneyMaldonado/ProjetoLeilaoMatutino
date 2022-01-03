@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
+import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalListarComponent,
     AnimalincluirComponent,
-    RacaListarComponent
+    RacaListarComponent,
+    LeilaoListarComponent
   ],
   imports: [
     BrowserModule,
