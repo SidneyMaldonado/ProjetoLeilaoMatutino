@@ -20,7 +20,7 @@ export class VendedorIncluirComponent implements OnInit {
     idVendedor: 0,
     nome: '',
     cpf: 0,
-    dataNascimento:,
+    dataNascimento: new Date,
     telefone: 0,
     email: 'a@a.com.br',
     ativo: true
