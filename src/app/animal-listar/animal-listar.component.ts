@@ -14,7 +14,7 @@ export class AnimalListarComponent implements OnInit {
   constructor( private servicoAnimal: AnimalService) { }
 
   ngOnInit(): void {
-    this.servicoAnimal.listar().subscribe( 
+    this.servicoAnimal.listar().subscribe(
       dados=> this.animais = dados
     )
 
