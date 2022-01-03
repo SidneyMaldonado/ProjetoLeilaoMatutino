@@ -1,4 +1,7 @@
+import { CompradorService } from './../services/comprador.service';
+import { Comprador } from './../entities/comprador';
 import { Component, OnInit } from '@angular/core';
+import { timeStamp } from 'console';
 
 @Component({
   selector: 'app-comprador-listar',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompradorListarComponent implements OnInit {
 
-  constructor() { }
+  compradores: Comprador[] = []
+  constructor( private servicoComprador: CompradorService) { }
+
 
   ngOnInit(): void {
+    this.servicoComprador.listar().subscribe(
+      dados => this.compradores = dados
+    )
   }
 
 }
