@@ -1,4 +1,4 @@
-export interface Leilao {
+export interface Medico {
 
     idMedico: number,
     nome: string,
