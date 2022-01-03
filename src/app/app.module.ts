@@ -9,6 +9,7 @@ import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
+import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
     AnimalListarComponent,
     AnimalincluirComponent,
     RacaListarComponent,
-    LeilaoListarComponent
+    LeilaoListarComponent,
+    CompradorListarComponent
   ],
   imports: [
     BrowserModule,
