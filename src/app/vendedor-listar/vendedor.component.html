@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <h2>Lista de Vendedores</h2>
+    <a href="vendedor/incluir" class="btn btn-primary">Incluir Vendedor</a>
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Cpf</th>
+          <th>dataNascimento</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Ativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Vendedor of vendedores">
+          <td>{{Vendedor.idVendedor}}</td>
+          <td>{{Vendedor.nome}}</td>
+          <td>{{Vendedor.cpf}}</td>
+          <td>{{Vendedor.dataNascimento}}</td>
+          <td>{{Vendedor.telefone}}</td>
+          <td>{{Vendedor.email}}</td>
+          <td>{{Vendedor.ativo}}</td>
+          <td><a href="Vendedor/alterar" class="btn btn-info">Alterar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

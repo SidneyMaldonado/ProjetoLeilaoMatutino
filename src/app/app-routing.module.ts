@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:"animal/incluir", component: AnimalincluirComponent},
   {path: "raca", component: RacaListarComponent}
 
+
 ];
 
 @NgModule({
