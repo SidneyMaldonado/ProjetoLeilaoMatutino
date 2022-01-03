@@ -9,7 +9,7 @@ import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
-import { MedicoListarComponent } from './medico-listar/medico-listar.component';
+import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { MedicoListarComponent } from './medico-listar/medico-listar.component';
     AnimalincluirComponent,
     RacaListarComponent,
     LeilaoListarComponent,
-    MedicoListarComponent
+    CompradorListarComponent
   ],
   imports: [
     BrowserModule,
