@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
+import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CompradorListarComponent } from './comprador-listar/comprador-listar.co
     AnimalincluirComponent,
     RacaListarComponent,
     LeilaoListarComponent,
-    CompradorListarComponent
+    CompradorListarComponent,
+    LeilaoincluirComponent
   ],
   imports: [
     BrowserModule,
