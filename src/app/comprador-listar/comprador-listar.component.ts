@@ -1,3 +1,5 @@
+import { CompradorService } from './../services/comprador.service';
+import { Comprador } from './../entities/comprador';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompradorListarComponent implements OnInit {
 
-  constructor() { }
+  compradores: Comprador[] = [];
+  constructor(private compradorService: CompradorService) { }
 
   ngOnInit(): void {
+    this.compradorService.listar().subscribe(
+      dados=> this.compradores = dados
+    )
   }
 
 }
