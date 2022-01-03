@@ -1,4 +1,5 @@
 import { Mensagem } from './../entities/mensagem';
+import { Comprador } from './../entities/comprador';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,22 +12,25 @@ export class CompradorService {
   constructor(private http: HttpClient) { }
 
   listar(): Observable<any>{
-    return this.http.get<Comprador[]>("http://localhost:8080/comprador");
+    return this.http.get<Comprador[]>("http://localhost:8080/comprador")
   }
 
-  buscar( id: string ): Observable<Comprador>{
-    return this.http.get<Comprador>("http://localhost:8080/animal/" + id)
+  buscar( id: string): Observable<Comprador>{
+    return this.http.get<Comprador>("http://localhost:8080/comprador" + id)
   }
 
-  incluir( comprador: Comprador ): Observable<Mensagem>{
-    return this.http.post<Mensagem>("http://localhost:8080/animal",comprador);
+  incluir( comprador: Comprador): Observable<Mensagem>{
+    return this.http.post<Mensagem>("http://localhost:8080/comprador", comprador);
   }
 
-  alterar( animal: Comprador): Observable<Mensagem>{
-    return this.http.put<Mensagem>("http://localhost:8080/animal", comprador);
+  alterar(comprador: Comprador): Observable<Mensagem>{
+    return this.http.put<Mensagem>("http://localhost:8080/comprador", comprador);
   }
 
-  excluir( animal: Comprador): Observable<Mensagem>{
-    return this.http.delete<Mensagem>("http://localhost:8080/animal/"+ comprador.idComprador);
+  excluir(comprador: Comprador): Observable<Mensagem>{
+    return this.http.delete<Mensagem>("http://localhost:8080/comprador" + comprador.idComprador)
   }
+
+
+>>>>>>> 99ba7890a87fb9bfc287ba1bce85f323fa5d8934
 }
