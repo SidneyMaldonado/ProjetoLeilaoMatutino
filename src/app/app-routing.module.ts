@@ -11,7 +11,7 @@ const routes: Routes = [
 
   {path:"animal", component: AnimalListarComponent},
   {path:"animal/incluir", component: AnimalincluirComponent},
-  {path:"comprador", component: CompradorListarComponent}
+  {path:"comprador", component: CompradorListarComponent},
   {path: "raca-listar", component: RacaListarComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
   {path: "vendedor", component : VendedorListarComponent}
