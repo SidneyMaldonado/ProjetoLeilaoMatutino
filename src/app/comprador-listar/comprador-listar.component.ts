@@ -1,6 +1,7 @@
 import { CompradorService } from './../services/comprador.service';
 import { Comprador } from './../entities/comprador';
 import { Component, OnInit } from '@angular/core';
+import { timeStamp } from 'console';
 
 @Component({
   selector: 'app-comprador-listar',
