@@ -1,8 +1,8 @@
 import { Mensagem } from './../entities/mensagem';
-import { NgForm } from '@angular/forms';
 import { Leilao } from './../entities/leilao';
+import { LeilaoService } from './../services/leilao.service';
 import { Component, OnInit } from '@angular/core';
-import { LeilaoService } from '../services/leilao.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-leilaoincluir',
@@ -27,17 +27,22 @@ export class LeilaoincluirComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   incluir( frm: NgForm){
 
 
     this.leilaoService.incluir(this.leilao).subscribe(
-      dados =>{
-          this.mensagem = dados;
-          alert(this.mensagem.mensagem)
+
+      dados => { this.mensagem = dados
+
+        alert(this.mensagem.mensagem)
+        this.mensagem.erros.forEach(obj => {
+          alert(obj)
+         });
       }
+
     )
 
   }
-
 
 }

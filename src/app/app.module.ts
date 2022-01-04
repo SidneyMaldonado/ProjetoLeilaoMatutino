@@ -13,6 +13,8 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir.component';
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
+import { CommonModule } from '@angular/common';
+import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
 
 
 @NgModule({
@@ -27,13 +29,15 @@ import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component'
     LeilaoListarComponent,
     CompradorListarComponent,
     MedicoincluirComponent,
-    MedicoListarComponent
+    MedicoListarComponent,
+    LeilaoincluirComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
