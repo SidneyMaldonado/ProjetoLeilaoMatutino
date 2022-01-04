@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vendedor } from '../entities/vendedor';
+import { VendedorService } from '../services/vendedor.service';
 
 @Component({
   selector: 'app-vendedor-listar',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendedorListarComponent implements OnInit {
 
-  constructor() { }
+  vendedores: Vendedor [] = [] 
+  constructor(private serviceVendedor:VendedorService) { }
 
   ngOnInit(): void {
+
+    this.serviceVendedor.listar().subscribe(
+      dados => this.vendedores = dados
+    )
   }
 
 }
