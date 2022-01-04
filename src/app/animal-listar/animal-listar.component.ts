@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../entities/animal';
-import { Raca } from '../entities/raca';
 import { AnimalService } from '../services/animal.service';
 
 @Component({
