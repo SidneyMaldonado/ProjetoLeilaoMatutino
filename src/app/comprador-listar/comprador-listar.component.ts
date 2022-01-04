@@ -1,7 +1,10 @@
 import { CompradorService } from './../services/comprador.service';
 import { Comprador } from './../entities/comprador';
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 233860943a0656698c420d5226497a1f3f1619df
 
 @Component({
   selector: 'app-comprador-listar',
