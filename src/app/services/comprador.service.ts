@@ -30,7 +30,4 @@ export class CompradorService {
   excluir(comprador: Comprador): Observable<Mensagem>{
     return this.http.delete<Mensagem>("http://localhost:8080/comprador" + comprador.idComprador)
   }
-
-
->>>>>>> 99ba7890a87fb9bfc287ba1bce85f323fa5d8934
 }
