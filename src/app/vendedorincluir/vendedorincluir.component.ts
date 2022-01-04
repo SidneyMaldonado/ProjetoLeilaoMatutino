@@ -36,5 +36,27 @@ mensagem: Mensagem ={
     )
   }
 
+  incluir(frm: NgForm){
+
+    this.vendedorService.incluir(this.vendedores).subscribe(
+
+      dados => {this.mensagem = dados
+
+        alert(this.mensagem.mensagem)
+        this.mensagem.erros.forEach(obj => {
+          alert(obj)
+        });
+    
+      }
+      
+    )
+
+
+  }
+
+
+
+
 }
 
+    

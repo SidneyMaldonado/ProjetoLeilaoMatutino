@@ -6,6 +6,7 @@ import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
+import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"animal/incluir", component: AnimalincluirComponent},
   {path:"comprador", component: CompradorListarComponent},
   {path: "raca", component: RacaListarComponent},
+  {path: "raca/incluir", component: RacaIncluirComponent},
   {path: "leilao", component: LeilaoListarComponent},
   {path: "vendedor", component: VendedorListarComponent},
   {path: "medico", component: MedicoListarComponent},
