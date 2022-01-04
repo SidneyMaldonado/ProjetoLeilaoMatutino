@@ -34,7 +34,9 @@ import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component'
     RacaIncluirComponent,
     VendedorListarComponent,
     VendedorIncluirComponent,
-    LeilaoincluirComponent  
+    LeilaoincluirComponent,
+    LeilaoincluirComponent
+
   ],
   imports: [
     BrowserModule,
