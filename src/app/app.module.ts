@@ -13,7 +13,12 @@ import { VendedorIncluirComponent } from './vendedor-incluir/vendedor-incluir.co
 >>>>>>> 1e4b5a8eb315be940e4c5d7e3ac7b5a20522fcb6
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
+<<<<<<< HEAD
 
+=======
+import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
+import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
+>>>>>>> 87846caff0e4737c69e42238bc915fc57723942e
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ VendedorIncluirComponent,
 >>>>>>> 1e4b5a8eb315be940e4c5d7e3ac7b5a20522fcb6
     RacaListarComponent,
     LeilaoListarComponent,
-    CompradorListarComponent
+    CompradorListarComponent,
+    MedicoincluirComponent
   ],
   imports: [
     BrowserModule,
