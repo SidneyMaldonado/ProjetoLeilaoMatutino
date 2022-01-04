@@ -22,7 +22,7 @@ export class VendedorIncluirComponent implements OnInit {
     cpf: 0,
     dataNascimento: new Date,
     telefone: 0,
-    email: 'a@a.com.br',
+    email: '',
     ativo: true
   }
   constructor(private vendedorService: VendedorService) { }

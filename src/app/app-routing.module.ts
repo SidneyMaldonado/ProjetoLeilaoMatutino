@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
+import { VendedorIncluirComponent } from './vendedor-incluir/vendedor-incluir.component';
 
 const routes: Routes = [
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"comprador", component: CompradorListarComponent},
   {path: "raca-listar", component: RacaListarComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
-  {path: "vendedor", component : VendedorListarComponent}
+  {path: "vendedor-listar", component : VendedorListarComponent},
+  {path: "vendedor-incluir", component : VendedorIncluirComponent}
 
 ];
 
