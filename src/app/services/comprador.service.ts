@@ -12,7 +12,7 @@ export class CompradorService {
   constructor(private http: HttpClient) { }
 
   listar(): Observable<any>{
-    return this.http.get<Comprador[]>("http://localhost:8080/comprador")
+    return this.http.get<Comprador[]>("http://localhost:8080/comprador");
   }
 
   buscar( id: string): Observable<Comprador>{
@@ -28,7 +28,7 @@ export class CompradorService {
   }
 
   excluir(comprador: Comprador): Observable<Mensagem>{
-    return this.http.delete<Mensagem>("http://localhost:8080/comprador" + comprador.idComprador)
+    return this.http.delete<Mensagem>("http://localhost:8080/comprador" + comprador.idComprador);
   }
-
 }
+

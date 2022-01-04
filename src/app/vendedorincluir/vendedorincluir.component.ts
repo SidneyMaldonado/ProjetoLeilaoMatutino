@@ -5,26 +5,28 @@ import { Vendedor } from '../entities/vendedor';
 import { VendedorService } from '../services/vendedor.service';
 
 @Component({
-  selector: 'app-vendedor-incluir',
-  templateUrl: './vendedor-incluir.component.html',
-  styleUrls: ['./vendedor-incluir.component.css']
+  selector: 'app-vendedorincluir',
+  templateUrl: './vendedorincluir.component.html',
+  styleUrls: ['./vendedorincluir.component.css']
 })
-export class VendedorIncluirComponent implements OnInit {
 
-  mensagem: Mensagem = {
+export class VendedorIncluirComponent implements OnInit {
+mensagem: Mensagem ={
     mensagem: '',
-    erros: []
-  }
-  vendedores: Vendedor[] = []
-    vendedor: Vendedor = {
+  erros: []
+  
+}
+  vendedores : Vendedor = {
     idVendedor: 0,
     nome: '',
     cpf: 0,
-    dataNascimento: new Date,
+    dataNascimento: new Date(),
     telefone: 0,
-    email: 'a@a.com.br',
-    ativo: true
+    email: '',
+    ativo: false
   }
+  
+
   constructor(private vendedorService: VendedorService) { }
 
   ngOnInit(): void {
@@ -32,23 +34,29 @@ export class VendedorIncluirComponent implements OnInit {
     this.vendedorService.listar().subscribe(
       dados => this.vendedores = dados
     )
-
   }
 
-  incluir( frm: NgForm){
+  incluir(frm: NgForm){
 
+    this.vendedorService.incluir(this.vendedores).subscribe(
 
-    this.vendedorService.incluir(this.vendedor).subscribe(
-
-      dados => { this.mensagem = dados
+      dados => {this.mensagem = dados
 
         alert(this.mensagem.mensagem)
         this.mensagem.erros.forEach(obj => {
           alert(obj)
-         });
-      }
-
-    )
+        });
     
+      }
+      
+    )
+
+
   }
+
+
+
+
 }
+
+    
