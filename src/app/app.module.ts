@@ -6,8 +6,11 @@ import { AnimalListarComponent } from './animal-listar/animal-listar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 import { VendedorIncluirComponent } from './vendedor-incluir/vendedor-incluir.component';
+=======
+>>>>>>> 1e4b5a8eb315be940e4c5d7e3ac7b5a20522fcb6
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 
@@ -17,9 +20,12 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
     AppComponent,
     AnimalListarComponent,
     AnimalincluirComponent,
+<<<<<<< HEAD
 
     CompradorListarComponent,
 VendedorIncluirComponent,
+=======
+>>>>>>> 1e4b5a8eb315be940e4c5d7e3ac7b5a20522fcb6
     RacaListarComponent,
     LeilaoListarComponent,
     CompradorListarComponent
