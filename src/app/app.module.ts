@@ -7,13 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
 import { FormsModule } from '@angular/forms';
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
-import { VendedorIncluirComponent } from './vendedor-incluir/vendedor-incluir.component';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir.component';
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
-import { VendedorincluirComponent } from './vendedorincluir/vendedorincluir.component';
+import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
+import { CommonModule } from '@angular/common';
+import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
 
 
 @NgModule({
@@ -23,19 +24,20 @@ import { VendedorincluirComponent } from './vendedorincluir/vendedorincluir.comp
     AnimalincluirComponent,
     CompradorListarComponent,
     CompradorIncluirComponent,
-    VendedorIncluirComponent,
     RacaListarComponent,
     LeilaoListarComponent,
     CompradorListarComponent,
     MedicoincluirComponent,
     MedicoListarComponent,
-    VendedorincluirComponent
+    VendedorIncluirComponent,
+    LeilaoincluirComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

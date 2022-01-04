@@ -10,7 +10,7 @@ import { VendedorService } from '../services/vendedor.service';
   styleUrls: ['./vendedorincluir.component.css']
 })
 
-export class VendedorincluirComponent implements OnInit {
+export class VendedorIncluirComponent implements OnInit {
 mensagem: Mensagem ={
     mensagem: '',
   erros: []
