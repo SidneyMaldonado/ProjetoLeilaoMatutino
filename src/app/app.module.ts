@@ -12,14 +12,11 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir.component';
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
-<<<<<<< HEAD
 import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
-=======
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { CommonModule } from '@angular/common';
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
->>>>>>> 5cb703490ce6d162b9ebdd5cb83cb0ca48000e15
 
 
 @NgModule({
@@ -34,13 +31,10 @@ import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component'
     CompradorListarComponent,
     MedicoincluirComponent,
     MedicoListarComponent,
-<<<<<<< HEAD
     RacaIncluirComponent,
-VendedorListarComponent
-=======
+    VendedorListarComponent,
     VendedorIncluirComponent,
-    LeilaoincluirComponent
->>>>>>> 5cb703490ce6d162b9ebdd5cb83cb0ca48000e15
+    LeilaoincluirComponent  
   ],
   imports: [
     BrowserModule,
