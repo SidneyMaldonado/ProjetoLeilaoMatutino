@@ -14,6 +14,7 @@ import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
 <<<<<<< HEAD
 import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
+import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
 =======
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { CommonModule } from '@angular/common';
@@ -34,7 +35,8 @@ import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component'
     MedicoincluirComponent,
     MedicoListarComponent,
 <<<<<<< HEAD
-    RacaIncluirComponent
+    RacaIncluirComponent,
+VendedorListarComponent
 =======
     VendedorIncluirComponent,
     LeilaoincluirComponent
