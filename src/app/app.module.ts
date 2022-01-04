@@ -13,6 +13,7 @@ import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
 import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir.component';
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
+import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component'
     LeilaoListarComponent,
     CompradorListarComponent,
     MedicoincluirComponent,
-    MedicoListarComponent
+    MedicoListarComponent,
+    RacaIncluirComponent
   ],
   imports: [
     BrowserModule,
