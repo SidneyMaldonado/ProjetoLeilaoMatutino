@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: "raca", component: RacaListarComponent},
   {path: "leilao", component: LeilaoListarComponent},
   {path: "vendedor", component: VendedorListarComponent},
-  {path: "medico", component: MedicoListarComponent}
+  {path: "medico", component: MedicoListarComponent},
   {path: "vendedor/incluir", component: VendedorIncluirComponent}
 
 
