@@ -35,9 +35,12 @@ export class MedicoincluirComponent implements OnInit {
 
 
     this.medicoService.incluir(this.medico).subscribe(
-      dados =>{
-          this.mensagem = dados;
-          alert(this.mensagem.mensagem)
+      dados => { this.mensagem = dados
+
+        alert(this.mensagem.mensagem)
+        this.mensagem.erros.forEach(obj => {
+          alert(obj)
+         });
       }
     )
 

@@ -9,12 +9,13 @@ import { VendedorService } from '../services/vendedor.service';
 })
 export class VendedorListarComponent implements OnInit {
 
-  vendedores: Vendedor[] = []
-  constructor( private servicoVendedor: VendedorService) { }
+  vendedores: Vendedor [] = [] 
+  constructor(private serviceVendedor:VendedorService) { }
 
   ngOnInit(): void {
-    this.servicoVendedor.listar().subscribe(
-      dados=> this.vendedores = dados
+
+    this.serviceVendedor.listar().subscribe(
+      dados => this.vendedores = dados
     )
   }
 
