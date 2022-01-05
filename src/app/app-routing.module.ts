@@ -11,10 +11,9 @@ import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.compo
 import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { NgModule } from '@angular/core';
-
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
-
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
+import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 
 
 
@@ -28,6 +27,7 @@ const routes: Routes = [
   {path: "raca-listar", component: RacaListarComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
   {path: "vendedor", component : VendedorListarComponent},
+  {path:"vendedor/alterar/id", component:VendedoralterarComponent,}
   {path:"comprador", component: CompradorListarComponent},
   {path: "raca", component: RacaListarComponent},
   {path: "raca/incluir", component: RacaIncluirComponent},
