@@ -11,9 +11,7 @@ import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.compo
 import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { NgModule } from '@angular/core';
-
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
-
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 
