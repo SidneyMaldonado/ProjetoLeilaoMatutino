@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompradorListarComponent implements OnInit {
 
-  compradores: Comprador[] = [];
+  compradores: Comprador[] = []
   constructor(private compradorService: CompradorService) { }
 
   ngOnInit(): void {

@@ -19,7 +19,10 @@
           <td>{{animal.registro}}</td>
           <td>{{animal.preco}}</td>
           <td>{{animal.idade}}</td>
-          <td><a href="animal/alterar" class="btn btn-info">Alterar</a></td>
+          <td>
+            <a href="animal/alterar/{{animal.idAnimal}}" class="btn btn-info">Alterar</a> &nbsp;
+            <a href="animal/excluir/{{animal.idAnimal}}" class="btn btn-info">Excluir</a>
+          </td>
         </tr>
       </tbody>
     </table>
