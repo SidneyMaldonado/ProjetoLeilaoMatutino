@@ -38,11 +38,11 @@ export class LeilaoalterarComponent implements OnInit {
     this.leilaoService.alterar(this.leilao).subscribe(
       alert(this.mensagem.mensagem),
       console.log(this.mensagem),
-      if (this.mensagem.erros != null){
+      /*if (this.mensagem.erros !) {
         this.mensagem.erros.forEach( (obj) => { alert(obj) })
       } else {
         this.router.navigateByUrl("animal")
-      }
+      }*/
     )
   }
 }
