@@ -1,3 +1,4 @@
+import { AnimalalterarComponent } from './animalalterar/animalalterar.component';
 import { CompradorIncluirComponent } from './comprador-incluir/comprador-incluir.component';
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
 
   {path:"animal", component: AnimalListarComponent},
   {path:"animal/incluir", component: AnimalincluirComponent},
+  {path:"animal/alterar/:id", component: AnimalalterarComponent},
   {path:"comprador-listar", component: CompradorListarComponent},
   {path:"comprador/incluir", component: CompradorIncluirComponent},
   {path: "raca-listar", component: RacaListarComponent},
