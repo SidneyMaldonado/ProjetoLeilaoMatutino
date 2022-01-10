@@ -21,6 +21,7 @@ import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component'
 import { FormsModule } from '@angular/forms';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
+import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
 
     VendedorListarComponent,
     VendedorIncluirComponent,
-    VendedoralterarComponent
+    VendedoralterarComponent,
+    MedicoalterarComponent
   ],
   imports: [
     BrowserModule,
