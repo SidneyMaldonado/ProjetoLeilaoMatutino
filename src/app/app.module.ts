@@ -18,6 +18,7 @@ import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.comp
 import { CommonModule } from '@angular/common';
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
+import { AnimalalterarComponent } from './animalalterar/animalalterar.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.comp
     AppComponent,
     AnimalListarComponent,
     AnimalincluirComponent,
+    AnimalalterarComponent,
     CompradorListarComponent,
     CompradorIncluirComponent,
     RacaListarComponent,
