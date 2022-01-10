@@ -27,12 +27,8 @@ const routes: Routes = [
   {path: "raca-listar", component: RacaListarComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
   {path: "vendedor", component : VendedorListarComponent},
-  {path:"vendedor/alterar/id", component:VendedoralterarComponent,}
-  {path:"comprador", component: CompradorListarComponent},
-  {path: "raca", component: RacaListarComponent},
+  {path:"vendedor/alterar/id", component:VendedoralterarComponent},
   {path: "raca/incluir", component: RacaIncluirComponent},
-  {path: "leilao", component: LeilaoListarComponent},
-  {path: "vendedor", component: VendedorListarComponent},
   {path: "medico", component: MedicoListarComponent},
   {path: "vendedor/incluir", component: VendedorIncluirComponent},
   {path: "leilao/incluir", component: LeilaoincluirComponent},

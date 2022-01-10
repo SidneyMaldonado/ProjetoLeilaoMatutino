@@ -1,3 +1,4 @@
+import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -5,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AnimalListarComponent } from './animal-listar/animal-listar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component'
-import { FormsModule } from '@angular/forms';
 import { CompradorListarComponent } from './comprador-listar/comprador-listar.component';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { LeilaoListarComponent } from './leilao-listar/leilao-listar.component';
@@ -16,7 +16,9 @@ import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { CommonModule } from '@angular/common';
+import { AnimalalterarComponent } from './animalalterar/animalalterar.component';
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
+import { FormsModule } from '@angular/forms';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 
 
@@ -25,27 +27,37 @@ import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.comp
     AppComponent,
     AnimalListarComponent,
     AnimalincluirComponent,
+    AnimalalterarComponent,
+
     CompradorListarComponent,
     CompradorIncluirComponent,
+
+
     RacaListarComponent,
+    RacaIncluirComponent,
+
+
     LeilaoListarComponent,
-    CompradorListarComponent,
+    LeilaoincluirComponent,
+    LeilaoalterarComponent,
+
     MedicoincluirComponent,
     MedicoListarComponent,
-    RacaIncluirComponent,
+
+
     VendedorListarComponent,
     VendedorIncluirComponent,
-    LeilaoincluirComponent,
-    LeilaoincluirComponent,
     VendedoralterarComponent
+
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
