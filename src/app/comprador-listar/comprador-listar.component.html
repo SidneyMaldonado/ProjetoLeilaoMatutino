@@ -18,7 +18,7 @@
           <td>{{comprador.idComprador}}</td>
           <td>{{comprador.nome}}</td>
           <td>{{comprador.cpf}}</td>
-          <td>{{comprador.dataNascimento}}</td>
+          <td>{{comprador.dataNascimento | date: 'dd/MM/yyyy'}}</td>
           <td>{{comprador.telefone}}</td>
           <td>{{comprador.email}}</td>
           <td><a href="comprador/alterar" class="btn btn-info">Alterar</a></td>

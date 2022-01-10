@@ -1,3 +1,4 @@
+import { Vendedor } from './../entities/vendedor';
 import { NgForm } from '@angular/forms';
 import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';
@@ -6,6 +7,13 @@ import { Mensagem } from '../entities/mensagem';
 import { Raca } from '../entities/raca';
 import { RacaService } from '../services/raca.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Comprador } from '../entities/comprador';
+import { Medico } from '../entities/medico';
+import { Leilao } from '../entities/leilao';
+import { LeilaoService } from '../services/leilao.service';
+import { MedicoService } from '../services/medico.service';
+import { CompradorService } from '../services/comprador.service';
+import { VendedorService } from '../services/vendedor.service';
 
 @Component({
   selector: 'app-animalalterar',
@@ -19,6 +27,10 @@ export class AnimalalterarComponent implements OnInit {
     erros: []
   }
   racas: Raca[] = []
+  vendedores: Vendedor[] = []
+  compradores: Comprador[] = []
+  medicos: Medico[] = []
+  leiloes: Leilao[] = []
 
   animal: Animal = {
     idAnimal: 0,
@@ -35,13 +47,29 @@ export class AnimalalterarComponent implements OnInit {
     ativo: false
   }
 
-  constructor(private animalService: AnimalService, private racaService: RacaService, private route: ActivatedRoute, 
+  constructor(private racaService: RacaService,private leilaoService: LeilaoService,private medicoService: MedicoService,private compradorService: CompradorService,private vendedorService: VendedorService, private animalService: AnimalService, private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
 
     this.racaService.listar().subscribe(
       dados => this.racas = dados
+    )
+
+    this.vendedorService.listar().subscribe(
+      dados => this.vendedores = dados
+    )
+
+    this.compradorService.listar().subscribe(
+      dados => this.compradores = dados
+    )
+
+    this.medicoService.listar().subscribe(
+      dados => this.medicos = dados
+    )
+
+    this.leilaoService.listar().subscribe(
+      dados => this.leiloes = dados
     )
 
     let id = this.route.snapshot.paramMap.get("id");
@@ -65,5 +93,5 @@ export class AnimalalterarComponent implements OnInit {
       }
     )
   }
-  
+
 }

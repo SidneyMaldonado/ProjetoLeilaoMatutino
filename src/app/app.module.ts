@@ -20,6 +20,8 @@ import { AnimalalterarComponent } from './animalalterar/animalalterar.component'
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
 import { FormsModule } from '@angular/forms';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
+import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
+import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component';
 
 
 @NgModule({
@@ -35,7 +37,7 @@ import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.comp
 
     RacaListarComponent,
     RacaIncluirComponent,
-
+    RacaAlterarComponent,
 
     LeilaoListarComponent,
     LeilaoincluirComponent,
@@ -43,13 +45,11 @@ import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.comp
 
     MedicoincluirComponent,
     MedicoListarComponent,
-
+    MedicoalterarComponent,
 
     VendedorListarComponent,
     VendedorIncluirComponent,
     VendedoralterarComponent
-
-
 
   ],
   imports: [
