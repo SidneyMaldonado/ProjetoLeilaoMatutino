@@ -25,8 +25,6 @@ export class RacaIncluirComponent implements OnInit {
   ngOnInit(): void {}
 
   incluir( frm: NgForm){
-
-  
     this.racaService.incluir(this.raca).subscribe(
 
       dados => { this.mensagem = dados
@@ -36,10 +34,9 @@ export class RacaIncluirComponent implements OnInit {
           alert(obj)
          });
       }
-
     )
-    
   }
+
 
 }
 

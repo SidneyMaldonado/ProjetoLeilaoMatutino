@@ -17,6 +17,7 @@ import { RacaListarComponent } from './raca-listar/raca-listar.component';
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
+import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:"comprador/incluir", component: CompradorIncluirComponent},
   {path: "raca", component: RacaListarComponent},
   {path: "raca/alterar/:id", component: RacaAlterarComponent},
+  {path: "raca/excluir/:id", component: RacaExcluirComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
   {path: "vendedor", component : VendedorListarComponent},
   {path:"vendedor/alterar/:id", component:VendedoralterarComponent},
