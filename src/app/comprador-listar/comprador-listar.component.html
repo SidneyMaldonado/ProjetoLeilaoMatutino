@@ -21,8 +21,10 @@
           <td>{{comprador.dataNascimento | date: 'dd/MM/yyyy'}}</td>
           <td>{{comprador.telefone}}</td>
           <td>{{comprador.email}}</td>
-          <td><a href="comprador/alterar" class="btn btn-info">Alterar</a> &nbsp;
-         <a href="comprador/excluir/{{comprador.idComprador}}" class="btn btn-info">Excluir</a></td>
+          <td>
+            <a href="comprador/alterar" class="btn btn-warning">Alterar</a>&nbsp;
+            <a href="comprador/excluir" class="btn btn-danger">Excluir</a>
+          </td>
         </tr>
       </tbody>
     </table>

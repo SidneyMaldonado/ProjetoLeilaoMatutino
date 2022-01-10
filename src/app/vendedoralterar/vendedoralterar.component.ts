@@ -52,7 +52,7 @@ export class VendedoralterarComponent implements OnInit {
         if (this.mensagem.erros != null){
           this.mensagem.erros.forEach( (obj) => { alert(obj) })
         } else {
-          this.router.navigateByUrl("animal")
+          this.router.navigateByUrl("vendedor")
         }
     }
   )

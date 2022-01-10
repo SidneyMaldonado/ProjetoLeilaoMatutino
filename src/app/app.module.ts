@@ -1,3 +1,4 @@
+import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
 import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
 import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component';
+import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component'
 
     CompradorListarComponent,
     CompradorIncluirComponent,
+    CompradoralterarComponent,
 
 
     RacaListarComponent,
@@ -49,7 +52,8 @@ import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component'
 
     VendedorListarComponent,
     VendedorIncluirComponent,
-    VendedoralterarComponent
+    VendedoralterarComponent,
+    VendedorexcluirComponent
 
   ],
   imports: [
