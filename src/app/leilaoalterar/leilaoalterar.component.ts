@@ -18,10 +18,6 @@ export class LeilaoalterarComponent implements OnInit {
   }
 
   leiloes : Leilao[] = []
-  constructor(private leilaoService: LeilaoService,
-              private route: ActivatedRoute,
-              private router: Router) { }
-
 
   leilao: Leilao = {
     idLeilao: 0,
@@ -30,6 +26,11 @@ export class LeilaoalterarComponent implements OnInit {
     data: new Date(),
     ativo: true
   }
+
+  constructor(private leilaoService: LeilaoService,
+    private route: ActivatedRoute,
+    private router: Router) { }
+
   ngOnInit(): void {
     this.leilaoService.listar().subscribe(
       dados => this.leilaoService = dados
@@ -38,9 +39,10 @@ export class LeilaoalterarComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get("id");
 
     this.leilaoService.buscar(id+"").subscribe(
-      (      dados: Leilao) => this.leilao = dados
+      dados => this.leilao = dados
     )
   }
+
   alterar( frm: NgForm){
     this.leilaoService.alterar(this.leilao).subscribe(
         dados => { this.mensagem = dados

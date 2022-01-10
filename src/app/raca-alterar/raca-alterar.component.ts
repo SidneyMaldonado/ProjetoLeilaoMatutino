@@ -22,8 +22,8 @@ export class RacaAlterarComponent implements OnInit {
     descricao: '',
     ativo: true
   }
- 
-  constructor(private racaService: RacaService, private route: ActivatedRoute, 
+
+  constructor(private racaService: RacaService, private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -46,7 +46,6 @@ export class RacaAlterarComponent implements OnInit {
         }
       }
     )
-    
   }
 
 }

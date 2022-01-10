@@ -3,7 +3,7 @@
 <div class="container mt-5">
   <H2>Alterar Animal</H2>
   <div class="row">
-  <form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="post">
+  <form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="put">
 
       <div class="mb-3 mt-3">
         <label for="nome" class="form-label">Nome:</label>
@@ -84,5 +84,5 @@
 
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-</div>
+  </div>
 </div>
