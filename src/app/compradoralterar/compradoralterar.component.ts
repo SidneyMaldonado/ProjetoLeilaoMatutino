@@ -38,6 +38,11 @@ export class CompradoralterarComponent implements OnInit {
     this.leilaoService.listar().subscribe(
       dados => this.leiloes = dados
     )
+    let id = this.route.snapshot.paramMap.get("id");
+
+    this.compradorService.buscar(id+"").subscribe(
+      dados => this.comprador = dados
+    )
   }
 
   alterar(frm:NgForm){
