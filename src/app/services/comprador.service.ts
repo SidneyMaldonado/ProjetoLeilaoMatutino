@@ -16,7 +16,7 @@ export class CompradorService {
   }
 
   buscar( id: string): Observable<Comprador>{
-    return this.http.get<Comprador>("http://localhost:8080/comprador" + id)
+    return this.http.get<Comprador>("http://localhost:8080/comprador/" + id)
   }
 
   incluir( comprador: Comprador): Observable<Mensagem>{

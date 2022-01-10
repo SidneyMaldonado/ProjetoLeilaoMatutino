@@ -23,14 +23,19 @@ const routes: Routes = [
   {path:"animal", component: AnimalListarComponent},
   {path:"animal/incluir", component: AnimalincluirComponent},
   {path:"animal/alterar/:id", component: AnimalalterarComponent},
-  {path:"comprador-listar", component: CompradorListarComponent},
+
+  {path:"comprador", component: CompradorListarComponent},
   {path:"comprador/incluir", component: CompradorIncluirComponent},
-  {path: "raca-listar", component: RacaListarComponent},
   {path: "comprador/alterar/:id", component: CompradoralterarComponent},
-  {path: "leilao-listar", component: LeilaoListarComponent},
-  {path: "vendedor", component : VendedorListarComponent},
-  {path:"vendedor/alterar/id", component:VendedoralterarComponent},
+
+  {path: "raca-listar", component: RacaListarComponent},
   {path: "raca/incluir", component: RacaIncluirComponent},
+
+  {path: "leilao-listar", component: LeilaoListarComponent},
+  
+  {path: "vendedor", component : VendedorListarComponent},
+  {path: "vendedor/alterar/id", component:VendedoralterarComponent},
+
   {path: "medico", component: MedicoListarComponent},
   {path: "vendedor/incluir", component: VendedorIncluirComponent},
   {path: "leilao/incluir", component: LeilaoincluirComponent},

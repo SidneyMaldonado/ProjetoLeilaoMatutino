@@ -19,6 +19,7 @@ export class CompradoralterarComponent implements OnInit {
     erros: []
   }
 
+
   leiloes: Leilao[] = []
   comprador: Comprador = {
     idComprador: 0,
@@ -35,23 +36,26 @@ export class CompradoralterarComponent implements OnInit {
     private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit(): void {
-    this.leilaoService.listar().subscribe(
-      dados => this.leiloes = dados
-    )
     let id = this.route.snapshot.paramMap.get("id");
 
     this.compradorService.buscar(id+"").subscribe(
       dados => this.comprador = dados
+    
     )
-  }
 
-  alterar(frm:NgForm){
+    this.leilaoService.listar().subscribe(
+      dados => this.leiloes = dados
+    )
+
+    }
+
+  alterar( frm: NgForm){
     this.compradorService.alterar(this.comprador).subscribe(
-      dados =>  {this.mensagem = dados
+      dados => { this.mensagem = dados
         alert(this.mensagem.mensagem)
         console.log(this.mensagem)
-        if(this.mensagem.erros != null){
-          this.mensagem.erros.forEach((obj) => {alert(obj)})
+        if (this.mensagem.erros != null){
+          this.mensagem.erros.forEach( (obj) => { alert(obj) })
         } else {
           this.router.navigateByUrl("comprador")
         }

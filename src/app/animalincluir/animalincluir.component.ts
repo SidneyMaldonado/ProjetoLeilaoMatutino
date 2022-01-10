@@ -12,9 +12,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Animal } from '../entities/animal';
 import { Raca } from '../entities/raca';
-import { Route, Router } from '@angular/router';
 import { LeilaoService } from '../services/leilao.service';
-
 
 @Component({
   selector: 'app-animalincluir',
@@ -46,7 +44,6 @@ export class AnimalincluirComponent implements OnInit {
     idLeilao: 0,
     ativo: true
   }
-
   constructor(private racaService: RacaService,private leilaoService: LeilaoService,private medicoService: MedicoService,private compradorService: CompradorService,private vendedorService: VendedorService, private animalService: AnimalService) { }
 
   ngOnInit(): void {
@@ -78,24 +75,13 @@ export class AnimalincluirComponent implements OnInit {
 
     this.animalService.incluir(this.animal).subscribe(
 
-
       dados => { this.mensagem = dados
-        alert(this.mensagem.mensagem)
-        console.log(this.mensagem)
-        if (this.mensagem.erros != null){
-          this.mensagem.erros.forEach( (obj) => { alert(obj) })
-        } else {
-          this.router.navigateByUrl("animal")
-        }
-      }
-    /*  dados => { this.mensagem = dados
-
         console.log(this.animal)
         alert(this.mensagem.mensagem)
         this.mensagem.erros.forEach(obj => {
           alert(obj)
          });
-      }*/
+      }
 
     )
 
