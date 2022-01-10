@@ -1,4 +1,4 @@
-<H2>Incluir Vendedor</H2>
+<H2>Alterar Vendedor</H2>
 <div class="container mt-5">
     <div class="row">
 <form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="put">
@@ -12,7 +12,7 @@
 
     <div class="mb-3">
       <label for="registro" class="form-label">CPF:</label>
-      <input type="text" class="form-control" id="cpf" placeholder="Informe o cpf" name="cpf"
+      <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf"
       [(ngModel)]="vendedores.cpf" >
     </div>
 

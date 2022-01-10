@@ -16,9 +16,10 @@
           <td>{{leilao.idLeilao}}</td>
           <td>{{leilao.nome}}</td>
           <td>{{leilao.descricao}}</td>
-          <td>{{leilao.data}}</td>
+          <td>{{leilao.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{leilao.ativo}}</td>
-          <td><a href="leilao/alterar" class="btn btn-info">Alterar</a></td>
+          <a href="leilao/alterar/{{leilao.idLeilao}}" class="btn btn-info">Alterar</a> &nbsp;
+            <a href="leilao/excluir/{{leilao.idLeilao}}" class="btn btn-info">Excluir</a>
         </tr>
       </tbody>
     </table>

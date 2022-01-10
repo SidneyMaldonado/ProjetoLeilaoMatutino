@@ -18,11 +18,11 @@
           <td>{{medico.idMedico}}</td>
           <td>{{medico.nome}}</td>
           <td>{{medico.crmv}}</td>
-          <td>{{medico.dataNascimento}}</td>
+          <td>{{medico.dataNascimento | date: 'dd/MM/yyyy'}}</td>
           <td>{{medico.telefone}}</td>
           <td>{{medico.email}}</td>
           <td>{{medico.ativo}}</td>
-          <td><a href="medico/alterar" class="btn btn-info">Alterar</a></td>
+          <td><a href="medico/alterar/{{medico.idMedico}}" class="btn btn-info">Alterar</a></td>
         </tr>
       </tbody>
     </table>
