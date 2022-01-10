@@ -45,11 +45,12 @@ import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component'
 
     MedicoincluirComponent,
     MedicoListarComponent,
+    MedicoalterarComponent,
 
     VendedorListarComponent,
     VendedorIncluirComponent,
-    VendedoralterarComponent,
-    MedicoalterarComponent
+    VendedoralterarComponent
+
   ],
   imports: [
     BrowserModule,
