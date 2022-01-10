@@ -11,40 +11,34 @@ import { MedicoListarComponent } from './medico-listar/medico-listar.component';
 import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.component';
 import { RacaIncluirComponent } from './raca-incluir/raca-incluir.component';
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
-import { NgModule, Component } from '@angular/core';
-
+import { NgModule } from '@angular/core';
 import { RacaListarComponent } from './raca-listar/raca-listar.component';
-
 import { MedicoincluirComponent } from './medicoincluir/medicoincluir.component';
+import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 
 
 
 const routes: Routes = [
 
-  {path: "animal", component: AnimalListarComponent},
-  {path: "animal/incluir", component: AnimalincluirComponent},
-  {path: "animal/alterar/:id", component: AnimalalterarComponent},
-
-  {path: "comprador-listar", component: CompradorListarComponent},
-  {path: "comprador/incluir", component: CompradorIncluirComponent},
-  {path: "comprador", component: CompradorListarComponent},
-  {path: "comprador/alterar/:id", component: CompradoralterarComponent},
-
-  {path: "raca-listar",   component: RacaListarComponent},
-  {path: "raca",          component: RacaListarComponent},
-  {path: "raca/incluir",  component: RacaIncluirComponent},
-
+  {path:"animal", component: AnimalListarComponent},
+  {path:"animal/incluir", component: AnimalincluirComponent},
+  {path:"animal/alterar/:id", component: AnimalalterarComponent},
+  {path:"comprador", component: CompradorListarComponent},
+  {path:"comprador/incluir", component: CompradorIncluirComponent},
+  {path:"comprador/alterar/:id", component: CompradoralterarComponent},
+  {path: "raca-listar", component: RacaListarComponent},
   {path: "leilao-listar", component: LeilaoListarComponent},
-  {path: "leilao", component: LeilaoListarComponent},
-  {path: "leilao/incluir", component: LeilaoincluirComponent},
-
   {path: "vendedor", component : VendedorListarComponent},
+  {path:"vendedor/alterar/id", component:VendedoralterarComponent},
+  {path: "raca", component: RacaListarComponent},
+  {path: "raca/incluir", component: RacaIncluirComponent},
+  {path: "leilao", component: LeilaoListarComponent},
   {path: "vendedor", component: VendedorListarComponent},
-  {path: "vendedor/incluir", component: VendedorIncluirComponent},
-
   {path: "medico", component: MedicoListarComponent},
+  {path: "vendedor/incluir", component: VendedorIncluirComponent},
+  {path: "leilao/incluir", component: LeilaoincluirComponent},
   {path: "medico/incluir", component: MedicoincluirComponent}
-  
+
 ];
 
 @NgModule({

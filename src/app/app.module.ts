@@ -17,8 +17,7 @@ import { VendedorListarComponent } from './vendedor-listar/vendedor-listar.compo
 import { VendedorIncluirComponent } from './vendedorincluir/vendedorincluir.component';
 import { CommonModule } from '@angular/common';
 import { LeilaoincluirComponent } from './leilaoincluir/leilaoincluir.component';
-import { AnimalalterarComponent } from './animalalterar/animalalterar.component';
-import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
+import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.component';
 
 
 @NgModule({
@@ -38,8 +37,7 @@ import { CompradoralterarComponent } from './compradoralterar/compradoralterar.c
     VendedorIncluirComponent,
     LeilaoincluirComponent,
     LeilaoincluirComponent,
-    AnimalalterarComponent,
-    CompradoralterarComponent
+    VendedoralterarComponent
 
   ],
   imports: [
