@@ -26,7 +26,10 @@
           <td>{{vendedor.telefone}}</td>
           <td>{{vendedor.email}}</td>
           <td>{{vendedor.ativo}}</td>
-          <td><a href="vendedor/alterar/{{vendedor.idVendedor}}" class="btn btn-info">Alterar</a></td>
+          <td>
+            <a href="vendedor/alterar/{{vendedor.idVendedor}}" class="btn btn-warning">Alterar</a> &nbsp;
+            <a href="vendedor/excluir/{{vendedor.idVendedor}}" class = "btn btn-danger">Excluir</a>
+          </td>
           
         </tr>
         
