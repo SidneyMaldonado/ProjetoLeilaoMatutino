@@ -9,6 +9,7 @@ import { VendedorService } from '../services/vendedor.service';
 })
 export class VendedorListarComponent implements OnInit {
 
+
   vendedores: Vendedor [] = [] 
   constructor(private serviceVendedor:VendedorService) { }
 
