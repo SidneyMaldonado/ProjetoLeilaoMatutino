@@ -12,15 +12,16 @@ import { NgForm } from '@angular/forms';
 })
 export class LeilaoalterarComponent implements OnInit {
 
-  leiloes : Leilao[] = []
-  leilaoService: any;
-  constructor(private servicoLeilao : LeilaoService, private route: ActivatedRoute,
-    private router: Router) { }
-
   mensagem: Mensagem = {
     mensagem: '',
     erros: []
   }
+
+  leiloes : Leilao[] = []
+  constructor(private leilaoService: LeilaoService,
+              private route: ActivatedRoute,
+              private router: Router) { }
+
 
   leilao: Leilao = {
     idLeilao: 0,
@@ -30,19 +31,27 @@ export class LeilaoalterarComponent implements OnInit {
     ativo: true
   }
   ngOnInit(): void {
-    this.servicoLeilao.listar().subscribe(
-      dados => this.servicoLeilao = dados
+    this.leilaoService.listar().subscribe(
+      dados => this.leilaoService = dados
+    )
+
+    let id = this.route.snapshot.paramMap.get("id");
+
+    this.leilaoService.buscar(id+"").subscribe(
+      (      dados: Leilao) => this.leilao = dados
     )
   }
   alterar( frm: NgForm){
     this.leilaoService.alterar(this.leilao).subscribe(
-      alert(this.mensagem.mensagem),
-      console.log(this.mensagem),
-      /*if (this.mensagem.erros !) {
-        this.mensagem.erros.forEach( (obj) => { alert(obj) })
-      } else {
-        this.router.navigateByUrl("animal")
-      }*/
+        dados => { this.mensagem = dados
+        alert(this.mensagem.mensagem)
+        console.log(this.mensagem)
+        if (this.mensagem.erros != null){
+          this.mensagem.erros.forEach( (obj) => { alert(obj) })
+        } else {
+          this.router.navigateByUrl("leilao")
+        }
+      }
     )
   }
 }
