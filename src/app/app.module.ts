@@ -1,3 +1,4 @@
+import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
 import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,7 @@ import { VendedoralterarComponent } from './vendedoralterar/vendedoralterar.comp
 import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
 import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component';
 import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
+import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
 
 
 @NgModule({
@@ -34,11 +36,13 @@ import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 
     CompradorListarComponent,
     CompradorIncluirComponent,
+    CompradoralterarComponent,
 
 
     RacaListarComponent,
     RacaIncluirComponent,
     RacaAlterarComponent,
+    RacaExcluirComponent,
 
     LeilaoListarComponent,
     LeilaoincluirComponent,
@@ -51,9 +55,8 @@ import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
     VendedorListarComponent,
     VendedorIncluirComponent,
     VendedoralterarComponent,
-    RacaExcluirComponent
-
-  ],
+    VendedorexcluirComponent
+],
   imports: [
     BrowserModule,
     AppRoutingModule,

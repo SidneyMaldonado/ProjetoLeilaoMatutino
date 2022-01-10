@@ -22,15 +22,14 @@
           <td>{{vendedor.idVendedor}}</td>
           <td>{{vendedor.nome}}</td>
           <td>{{vendedor.cpf}}</td>
-<<<<<<< HEAD
           <td>{{vendedor.dataNascimento | date:'dd/MM/yyyy'}}  </td>
-=======
-          <td>{{vendedor.dataNascimento | date: 'dd/MM/yyyy'}}</td>
->>>>>>> 54926214d61e4f874111d304beb46e32e45afc58
           <td>{{vendedor.telefone}}</td>
           <td>{{vendedor.email}}</td>
           <td>{{vendedor.ativo}}</td>
-          <td><a href="vendedor/alterar/{{vendedor.idVendedor}}" class="btn btn-info">Alterar</a></td>
+          <td>
+            <a href="vendedor/alterar/{{vendedor.idVendedor}}" class="btn btn-warning">Alterar</a> &nbsp;
+            <a href="vendedor/excluir/{{vendedor.idVendedor}}" class = "btn btn-danger">Excluir</a>
+          </td>
           
         </tr>
         
