@@ -43,6 +43,7 @@ export class LeilaoexcluirComponent implements OnInit {
   }
 
   excluir( frm: NgForm){
+    alert("chegou aqui");
     debugger;
     this.leilaoService.excluir(this.leilao).subscribe(
       dados => { this.mensagem = dados
