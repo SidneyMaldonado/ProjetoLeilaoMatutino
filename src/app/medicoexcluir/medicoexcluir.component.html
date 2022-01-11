@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
 
-    <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="post">
+    <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="delete">
 
       <div class="mb-3 mt-3">
         <label for="nome" class="form-label">Nome:</label>
@@ -34,7 +34,6 @@
         <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email"
         [(ngModel)]="medico.email" readonly>
       </div>
-
 
       <button type="submit" class="btn btn-danger">Excluir</button>
     </form>

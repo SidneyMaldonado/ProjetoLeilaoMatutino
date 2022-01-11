@@ -50,7 +50,5 @@ export class MedicoexcluirComponent implements OnInit {
 
       }
     )
-
   }
-
 }

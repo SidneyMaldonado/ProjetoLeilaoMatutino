@@ -27,6 +27,8 @@ import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
 import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component';
 import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component';
+import { CompradorexcluirComponent } from './compradorexcluir/compradorexcluir.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component'
     CompradorListarComponent,
     CompradorIncluirComponent,
     CompradoralterarComponent,
-
+    CompradorexcluirComponent,
 
     RacaListarComponent,
     RacaIncluirComponent,
