@@ -31,9 +31,6 @@ export class LeilaoexcluirComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.leilaoService.listar().subscribe(
-      dados => this.leilaoService = dados
-    )
 
     let id = this.route.snapshot.paramMap.get("id");
 
