@@ -1,3 +1,4 @@
+import { AnimalexcluirComponent } from './animalexcluir/animalexcluir.component';
 import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component';
 import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
 import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
@@ -34,10 +35,12 @@ import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component'
     AnimalListarComponent,
     AnimalincluirComponent,
     AnimalalterarComponent,
+    AnimalexcluirComponent,
 
     CompradorListarComponent,
     CompradorIncluirComponent,
     CompradoralterarComponent,
+
 
 
     RacaListarComponent,
