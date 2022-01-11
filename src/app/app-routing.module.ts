@@ -1,3 +1,4 @@
+import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component';
 import { AnimalalterarComponent } from './animalalterar/animalalterar.component';
 import { AnimalincluirComponent } from './animalincluir/animalincluir.component';
 import { AnimalListarComponent } from './animal-listar/animal-listar.component';
@@ -53,7 +54,8 @@ const routes: Routes = [
   {path: "medico", component: MedicoListarComponent},
   {path: "medico/incluir", component: MedicoincluirComponent},
   {path: "medico/alterar/:id", component: MedicoalterarComponent},
-  
+  {path:  "medico/excluir/:id", component: MedicoexcluirComponent},
+
   {path: "vendedor/incluir", component: VendedorIncluirComponent},
   {path: "vendedor", component : VendedorListarComponent},
   {path: "vendedor/alterar/:id", component:VendedoralterarComponent},

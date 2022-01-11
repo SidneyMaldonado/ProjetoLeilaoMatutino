@@ -25,6 +25,7 @@ import { RacaAlterarComponent } from './raca-alterar/raca-alterar.component';
 import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component';
 import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
+import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.comp
     VendedorListarComponent,
     VendedorIncluirComponent,
     VendedoralterarComponent,
-    VendedorexcluirComponent
+    VendedorexcluirComponent,
+    MedicoexcluirComponent
 ],
   imports: [
     BrowserModule,
