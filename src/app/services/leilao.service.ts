@@ -28,7 +28,7 @@ export class LeilaoService {
   }
 
   excluir( leilao: Leilao): Observable<Mensagem>{
-    return this.http.delete<Mensagem>("http://localhost:8080/leilao/"+ leilao.idLeilao);
+    return this.http.delete<Mensagem>("http://localhost:8080/raca/"+ leilao.idLeilao);
   }
 
 }

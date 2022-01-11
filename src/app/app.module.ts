@@ -1,3 +1,4 @@
+import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component';
 import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
 import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
 import { NgModule } from '@angular/core';
@@ -48,16 +49,18 @@ import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component'
     LeilaoListarComponent,
     LeilaoincluirComponent,
     LeilaoalterarComponent,
+    LeilaoexcluirComponent,
 
     MedicoincluirComponent,
     MedicoListarComponent,
     MedicoalterarComponent,
+    MedicoexcluirComponent,
 
     VendedorListarComponent,
     VendedorIncluirComponent,
     VendedoralterarComponent,
-    VendedorexcluirComponent,
-    MedicoexcluirComponent
+    VendedorexcluirComponent
+
 ],
   imports: [
     BrowserModule,
