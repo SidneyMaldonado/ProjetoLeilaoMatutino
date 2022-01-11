@@ -27,6 +27,7 @@ import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
 import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component';
 import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component';
+import { AnimalexcluirComponent } from './animalexcluir/animalexcluir.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component'
     AnimalListarComponent,
     AnimalincluirComponent,
     AnimalalterarComponent,
-
+    AnimalexcluirComponent,
+    
     CompradorListarComponent,
     CompradorIncluirComponent,
     CompradoralterarComponent,
@@ -57,7 +59,8 @@ import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component'
     VendedorIncluirComponent,
     VendedoralterarComponent,
     VendedorexcluirComponent,
-    MedicoexcluirComponent
+    MedicoexcluirComponent,
+    
 ],
   imports: [
     BrowserModule,
