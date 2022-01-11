@@ -40,7 +40,7 @@ const routes: Routes = [
   {path:"animal", component: AnimalListarComponent},
   {path:"animal/incluir", component: AnimalincluirComponent},
   {path:"animal/alterar/:id", component: AnimalalterarComponent},
-  {path:"animal/excluir/:id", component: AnimalexcluirComponent}
+  {path:"animal/excluir/:id", component: AnimalexcluirComponent},
 
   {path:"comprador", component: CompradorListarComponent},
   {path:"comprador/incluir", component: CompradorIncluirComponent},
