@@ -26,7 +26,7 @@ import { MedicoalterarComponent } from './medicoalterar/medicoalterar.component'
 import { RacaExcluirComponent } from './raca-excluir/raca-excluir.component';
 import { VendedorexcluirComponent } from './vendedorexcluir/vendedorexcluir.component';
 import { MedicoexcluirComponent } from './medicoexcluir/medicoexcluir.component';
-
+import { LeilaoexcluirComponent } from './leilaoexcluir/leilaoexcluir.component';
 
 @NgModule({
   declarations: [
