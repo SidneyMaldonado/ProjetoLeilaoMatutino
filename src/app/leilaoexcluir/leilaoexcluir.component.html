@@ -1,1 +1,33 @@
-<p>leilaoexcluir works!</p>
+
+
+<div class="container mt-5">
+  <H2>Excluir Leilão</H2>
+  <div class="row">
+
+    <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="delete">
+
+      <div class="mb-3 mt-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome"
+        [(ngModel)]="leilao.nome" >
+      </div>
+
+
+        <div class="mb-3">
+          <label for="descricao" class="form-label">Descrição:</label>
+          <input type="text" class="form-control" id="descricao" name="descricao"
+          [(ngModel)]="leilao.descricao" >
+        </div>
+
+
+      <div class="mb-3 mt-3">
+          <label for="data" class="form-label">Data:</label>
+          <input type="date" class="form-control" id="data" name="data"
+          [(ngModel)]="leilao.data"  >
+      </div>
+
+      <button type="submit" class="btn btn-danger">Excluir</button>
+    </form>
+
+  </div>
+</div>

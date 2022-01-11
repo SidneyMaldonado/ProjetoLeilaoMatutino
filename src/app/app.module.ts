@@ -1,3 +1,4 @@
+import { AnimalexcluirComponent } from './animalexcluir/animalexcluir.component';
 import { CompradoralterarComponent } from './compradoralterar/compradoralterar.component';
 import { LeilaoalterarComponent } from './leilaoalterar/leilaoalterar.component';
 import { NgModule } from '@angular/core';
@@ -36,11 +37,13 @@ import { CompradorexcluirComponent } from './compradorexcluir/compradorexcluir.c
     AnimalListarComponent,
     AnimalincluirComponent,
     AnimalalterarComponent,
+    AnimalexcluirComponent,
 
     CompradorListarComponent,
     CompradorIncluirComponent,
     CompradoralterarComponent,
     CompradorexcluirComponent,
+
 
     RacaListarComponent,
     RacaIncluirComponent,
@@ -50,16 +53,18 @@ import { CompradorexcluirComponent } from './compradorexcluir/compradorexcluir.c
     LeilaoListarComponent,
     LeilaoincluirComponent,
     LeilaoalterarComponent,
+    LeilaoexcluirComponent,
 
     MedicoincluirComponent,
     MedicoListarComponent,
     MedicoalterarComponent,
+    MedicoexcluirComponent,
 
     VendedorListarComponent,
     VendedorIncluirComponent,
     VendedoralterarComponent,
-    VendedorexcluirComponent,
-    MedicoexcluirComponent
+    VendedorexcluirComponent
+
 ],
   imports: [
     BrowserModule,

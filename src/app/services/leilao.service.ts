@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Leilao } from '../entities/leilao';
 import { Mensagem } from '../entities/mensagem';
 
@@ -30,5 +30,4 @@ export class LeilaoService {
   excluir( leilao: Leilao): Observable<Mensagem>{
     return this.http.delete<Mensagem>("http://localhost:8080/leilao/"+ leilao.idLeilao);
   }
-
 }
