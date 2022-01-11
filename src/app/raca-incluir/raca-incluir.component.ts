@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Mensagem } from '../entities/mensagem';
 import { Raca } from '../entities/raca';
 import { RacaService } from '../services/raca.service';
@@ -20,7 +21,8 @@ export class RacaIncluirComponent implements OnInit {
     descricao: '',
     ativo: true
   }
-  constructor(private racaService: RacaService) { }
+  constructor(private racaService: RacaService, private route: ActivatedRoute, 
+    private router: Router) { }
 
   ngOnInit(): void {}
 
@@ -29,9 +31,12 @@ export class RacaIncluirComponent implements OnInit {
 
       dados => { this.mensagem = dados
 
-        alert(this.mensagem.mensagem)
-        this.mensagem.erros.forEach(obj => {
-          alert(obj)
+        this.racaService.incluir(this.raca).subscribe(
+          dados => { this.mensagem = dados
+            alert(this.mensagem.mensagem)
+            console.log(this.mensagem)
+            this.router.navigateByUrl("raca")
+            
          });
       }
     )
