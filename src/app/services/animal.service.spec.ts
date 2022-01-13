@@ -5,8 +5,8 @@ import { AnimalService } from './animal.service';
 import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
 
 describe('AnimalService', () => {
-  let httpTestingController: HttpTestingController;
   let service: AnimalService;
+  let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -52,7 +52,7 @@ describe('AnimalService', () => {
   it('Test incluir()', ()=>{
 
     const msg : Mensagem= { mensagem: '', erros: []};
-    const animal: Animal = 
+    const animal: Animal =
       {
         "idAnimal": 3,
         "nome": "BBBBBBBBBBBBBBBB",
@@ -77,12 +77,12 @@ describe('AnimalService', () => {
     expect(testRequest.request.body.nome).toBe('BBBBBBBBBBBBBBBB')
     console.log('Mensagem:')
     console.log(testRequest.request.body)
-    testRequest.flush(msg) 
-    
+    testRequest.flush(msg)
+
   });
 
   it('Teste buscar()', ()=>{
-    const animal: Animal = 
+    const animal: Animal =
     {
       "idAnimal": 3,
       "nome": "Boizaoasdasdaasdad",
