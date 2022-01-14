@@ -47,10 +47,7 @@ export class LeilaoexcluirComponent implements OnInit {
         alert(this.mensagem.mensagem)
         console.log(this.mensagem)
         this.router.navigateByUrl("leilao")
-
       }
     )
-
   }
-
 }
