@@ -104,7 +104,12 @@ describe('MedicoService', () => {
 
 
 
-    //it('Teste alterar()', () => {
+    it('Teste alterar()', () => {
+
+      const msg: Mensagem = {
+        mensagem: '',
+        erros: []
+      }
 
       const medico: Medico = {
 
@@ -117,11 +122,19 @@ describe('MedicoService', () => {
         "ativo": true
 
       }
-      
-     
+
+      service.alterar(medico).subscribe( dados => expect(dados).toEqual(msg))
+
+      const testRequest = httpTestingController.expectOne('http://localhost:8080/medico')
+      expect(testRequest.request.method).toBe('PUT')
+      expect(testRequest.request.body.nome).toBe('Ricardo Serafim 1000')
+      console.log('Mensagem: ')
+      console.log(testRequest.request.body)
+      testRequest.flush(msg)
+
+    });
 
 
-    //});
 
     it('Test excluir()', () =>{
 
@@ -141,7 +154,7 @@ describe('MedicoService', () => {
         data => expect(data).toEqual(msg)  
       )
   
-      const testRequest = httpTestingController.expectOne('http://localhost:8080/medico');
+      const testRequest = httpTestingController.expectOne('http://localhost:8080/medico/');
       expect(testRequest.request.method).toBe('DELETE');
       expect(testRequest.request.body.nome.idMedico).toBe('Ricardo Serafim 1000')
       console.log('Mensagem: ')
