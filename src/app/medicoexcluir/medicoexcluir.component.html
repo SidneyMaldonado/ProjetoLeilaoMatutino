@@ -1,7 +1,7 @@
 
 
 <div class="container">
-  <H2>Excluir Médico Veterinário</H2>
+  <H2 id ="title">Excluir Medicos</H2>
   <div class="row">
 
     <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="delete">
@@ -36,7 +36,7 @@
         [(ngModel)]="medico.email" readonly>
       </div>
 
-      <button type="submit" class="btn btn-danger">Excluir</button>
+      <button type="submit" id="excluir" class="btn btn-danger">Excluir</button>
     </form>
 
   </div>

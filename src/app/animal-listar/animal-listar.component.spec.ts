@@ -26,6 +26,7 @@ describe('AnimalListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 
   it('Renderizar html', ()=>{
     const expected: string = 'Lista de Animais';
