@@ -51,8 +51,13 @@ describe('AnimalService', () => {
 
   it('Test incluir()', ()=>{
 
+<<<<<<< HEAD
     const msg : Mensagem= { mensagem: '', erros: []};
     const animal: Animal =
+=======
+    let msg : Mensagem= { mensagem: '', erros: []};
+    let animal: Animal = 
+>>>>>>> dd3ba54 (Ajustes)
       {
         "idAnimal": 3,
         "nome": "BBBBBBBBBBBBBBBB",
@@ -75,6 +80,7 @@ describe('AnimalService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/animal')
     expect(testRequest.request.method).toBe('POST')
     expect(testRequest.request.body.nome).toBe('BBBBBBBBBBBBBBBB')
+<<<<<<< HEAD
     console.log('Mensagem:')
     console.log(testRequest.request.body)
     testRequest.flush(msg)
@@ -83,6 +89,14 @@ describe('AnimalService', () => {
 
   it('Teste buscar()', ()=>{
     const animal: Animal =
+=======
+    testRequest.flush(msg) 
+    
+  });
+
+  it('Teste buscar()', ()=>{
+    let animal: Animal = 
+>>>>>>> dd3ba54 (Ajustes)
     {
       "idAnimal": 3,
       "nome": "Boizaoasdasdaasdad",
@@ -99,12 +113,14 @@ describe('AnimalService', () => {
     }
 
     service.buscar('3').subscribe(
-      data => expect(data).toEqual(animal)
+      data => expect(data.nome).toEqual(animal.nome)
     )
-    const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3');
-    expect(testRequest.request.method).toBe('GET');
-    testRequest.flush(animal);
 
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3')
+    expect(testRequest.request.method).toBe('GET')
+    expect(testRequest.request.responseType).toEqual('json')
+    testRequest.flush(animal) 
+    httpTestingController.verify();
   });
 
 });
