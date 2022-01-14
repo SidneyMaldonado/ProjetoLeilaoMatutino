@@ -101,12 +101,49 @@ describe('CompradorService', () => {
 
       const testRequest = httpTestingController.expectOne('http://localhost:8080/comprador/'+ comprador.idComprador);
       expect(testRequest.request.method).toBe('GET')
-      //expect(testRequest.request.body).toEqual(comprador)
-      testRequest.flush(comprador);
+      expect(testRequest.request.responseType).toEqual('json')
+      testRequest.flush(comprador)
+      httpTestingController.verify();
 
   });
 
+it('Test alterar()', ()=>{
+  const msg: Mensagem = {
+    mensagem: '',
+    erros: []
+  }
 
+  const comprador: Comprador =
+      {
+        "idComprador": 29,
+        "nome": "Henrique teste",
+        "cpf": "44444444444",
+        "dataNascimento": new Date("1998-07-20T04:00:00.000+00:00"),
+        "telefone": "+5567998458736",
+        "email": "lHenriqueLopes42@usp.br",
+        "idLeilao": 2,
+        "ativo": true
+      }
+
+      service.alterar(comprador).subscribe(
+        dados => expect(dados).toEqual(msg)
+      )
+
+      const testRequest = httpTestingController.expectOne('http://localhost:8080/comprador')
+    expect(testRequest.request.method).toBe('PUT')
+    expect(testRequest.request.responseType).toEqual('json')
+    expect(testRequest.request.body.nome).toBe('Henrique teste')
+    testRequest.flush(msg)
+    httpTestingController.verify();
+
+
+
+
+
+
+
+
+})
 
 
 

@@ -1,5 +1,5 @@
 <div class="container mt-3">
-    <h2>Lista de Compradores</h2>
+    <h2 id="title">Lista de Compradores</h2>
     <a href="comprador/incluir" class="btn btn-primary">Incluir Comprador</a> <!--Esse é o botao para incluir um comprador-->
      <table class="table table-bordered">
       <thead>
@@ -22,7 +22,7 @@
           <td>{{comprador.telefone}}</td>
           <td>{{comprador.email}}</td>
           <td>
-            <a href="comprador/alterar/{{comprador.idComprador}}" class="btn btn-warning">Alterar</a>&nbsp;
+            <a href="comprador/alterar/{{comprador.idComprador}}" id="alterar" class="btn btn-warning">Alterar</a>&nbsp;
             <a href="comprador/excluir/{{comprador.idComprador}}" class="btn btn-danger">Excluir</a>
           </td>
         </tr>

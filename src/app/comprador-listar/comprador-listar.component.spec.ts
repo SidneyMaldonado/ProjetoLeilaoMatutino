@@ -1,5 +1,6 @@
+import { CompradorService } from './../services/comprador.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CompradorListarComponent } from './comprador-listar.component';
 
 describe('CompradorListarComponent', () => {
@@ -8,7 +9,9 @@ describe('CompradorListarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompradorListarComponent ]
+      declarations: [ CompradorListarComponent ],
+      imports:[HttpClientTestingModule],
+      providers:[CompradorService]
     })
     .compileComponents();
   });
@@ -22,4 +25,14 @@ describe('CompradorListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('Renderizar o HTML', ()=>{
+    const expected: string = 'Lista de Compradores';
+    const result = fixture.debugElement.nativeElement.querySelector('#title');
+    console.log(result.innerHTML)
+    expect(result.innerHTML).toEqual(expected)
+  });
+
+
 });
