@@ -33,7 +33,4 @@ describe('AnimalListarComponent', () => {
     expect(result.innerHTML).toBe(expected)
   });
 
-
-
-
 });

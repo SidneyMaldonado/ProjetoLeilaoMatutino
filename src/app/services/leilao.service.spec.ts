@@ -61,26 +61,50 @@ describe('LeilaoService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao')
     expect(testRequest.request.method).toBe('POST')
     expect(testRequest.request.body.nome).toBe('DER Leiloes')
-    console.log('Mensagem:')
-    console.log(testRequest.request.body)
     testRequest.flush(msg)
   })
 
   // -------------TESTE BUSCAR------------------
-  it('Busca deve retornar leilao correto'), () => {
+  it('Teste buscar()'), () =>{
+    const date = new Date('2021-12-20T04:00:00.000+00:00');
     const leilao : Leilao = {
-      idLeilao: 0,
-      nome: '',
-      descricao: '',
-      data: new Date(),
-      ativo: false
+      "idLeilao": 3,
+      "nome": "Mil Tec Leiloes",
+      "descricao": "Leilao de bois nelores",
+      "data": date,
+      "ativo": true
     }
 
-    service.buscar('3').subscribe(
+    service.buscar(leilao.idLeilao+"").subscribe(
       data => expect(data).toEqual(leilao)
     )
-    const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao/');
-    expect(testRequest.request.method).toBe('GET');
-    testRequest.flush(leilao);
+    const testRequest = httpTestingController.match('http://localhost:8080/leilao/3');
+    console.log(testRequest.values);
+  }
+
+  it('Teste de alterar'), () => {
+    const msg: Mensagem = {
+      mensagem: '',
+      erros: []
+    }
+
+    const leilao : Leilao =
+      {
+      "idLeilao": 1,
+      "nome": "DER Leiloes",
+      "descricao": "Leilao de gado bovino",
+      "data": new Date(),
+      "ativo": true
+    }
+
+    service.alterar(leilao).subscribe(
+      dados => expect(dados).toEqual(msg)
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao');
+    expect(testRequest.request.method).toBe('PUT');
+    expect(testRequest.request.body.nome).toBe('DER Leiloes');
+    expect(testRequest.request.responseType).toBe('json');
+    testRequest.flush(msg)
   }
 });

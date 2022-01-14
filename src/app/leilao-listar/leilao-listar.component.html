@@ -1,5 +1,5 @@
 <div class="container mt-3">
-    <h2>Lista de Leilões</h2>
+    <h2 id="title">Lista de Leilões</h2>
     <a href="leilao/incluir" class="btn btn-primary">Incluir Leilão</a>
      <table class="table table-bordered">
       <thead>
@@ -19,7 +19,7 @@
           <td>{{leilao.data | date: 'dd/MM/yyyy'}}</td>
           <td>{{leilao.ativo}}</td>
           <td>
-            <a href="leilao/alterar/{{leilao.idLeilao}}" class="btn btn-warning">Alterar</a> &nbsp;
+            <a href="leilao/alterar/{{leilao.idLeilao}}" id="salvar" class="btn btn-warning">Alterar</a> &nbsp;
             <a href="leilao/excluir/{{leilao.idLeilao}}" class="btn btn-danger">Excluir</a>
           </td>
         </tr>
