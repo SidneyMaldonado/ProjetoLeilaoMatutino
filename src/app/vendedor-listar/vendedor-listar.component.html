@@ -1,12 +1,9 @@
  <div class="container mt-3" >
-    <h2>Lista de Vendedor</h2>
-
+    <h2> id ='title'>Lista de Vendedor</h2>
     <a href="vendedor/incluir" class="btn btn-primary">Incluir Vendedor </a>
-
      <table class="table table-bordered" >
       <thead>
         <tr >
-
           <th>Id</th>
           <th>Nome</th>
           <th>CPF</th>
@@ -16,7 +13,6 @@
           <th>Ativo</th>
         </tr>
       </thead>
-
       <tbody>
         <tr *ngFor="let vendedor of vendedores">
           <td>{{vendedor.idVendedor}}</td>
@@ -31,9 +27,6 @@
             <a href="vendedor/excluir/{{vendedor.idVendedor}}" class = "btn btn-danger">Excluir</a>
           </td>
         </tr>
-
       </tbody>
-
     </table>
-
   </div>

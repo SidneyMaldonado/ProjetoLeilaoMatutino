@@ -22,4 +22,15 @@ describe('VendedorexcluirComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('Deve renderizar html', () =>{
+    const expected: string = 'Excluir Vendedor';
+    const result = fixture.debugElement.nativeElement.querySelector('#title');
+    expect(result.innerHTML).toBe(expected)
+  });
+
+  it('Botao Salvar', () => {
+    const expected: string = 'Excluir';
+    const result = fixture.debugElement.nativeElement.querySelector('#excluir');
+    expect(result.innerHTML).toBe(expected)
+  })
 });

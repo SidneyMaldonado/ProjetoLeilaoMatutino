@@ -1,6 +1,5 @@
-<h2>Alterar Comprador</h2>
-
 <div class="container mt-5">
+  <h2 id="title">Alterar Comprador</h2>
     <div class="row">
         <form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="post">
 
@@ -32,10 +31,10 @@
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@exemplo.com" name="email"
                 [(ngModel)]="comprador.email">
             </div>
- 
+
             <div class="mb-3">
                 <label for="idLeilao" class="form-label"> <br> Leilão:</label>
-                <select class="form-control" id="idLeilao" placeholder="Informe o Leilão" name="idLeilao" 
+                <select class="form-control" id="idLeilao" placeholder="Informe o Leilão" name="idLeilao"
                 [(ngModel)]="comprador.idLeilao">
                     <option *ngFor="let leilao of leiloes" value="{{leilao.idLeilao}}"    >{{leilao.nome}}</option>
                   </select>
@@ -48,7 +47,7 @@
             </div>
 
             <br>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" id="salvar" class="btn btn-primary">Enviar</button>
 
       </form>
     </div>
