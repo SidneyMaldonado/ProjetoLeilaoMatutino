@@ -20,9 +20,9 @@ export class VendedorexcluirComponent implements OnInit {
   vendedor : Vendedor = {
     idVendedor: 0,
     nome: '',
-    cpf: 0,
+    cpf: '0',
     dataNascimento: new Date(),
-    telefone: 0,
+    telefone: '0',
     email: '',
     ativo: false
   }
