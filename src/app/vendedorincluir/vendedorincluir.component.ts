@@ -19,9 +19,9 @@ mensagem: Mensagem ={
   vendedores : Vendedor = {
     idVendedor: 0,
     nome: '',
-    cpf: 0,
+    cpf: '',
     dataNascimento: new Date(),
-    telefone: 0,
+    telefone: '',
     email: '',
     ativo: false
   }

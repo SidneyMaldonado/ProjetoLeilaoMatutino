@@ -2,10 +2,10 @@
 export interface Vendedor {
 
     idVendedor: number,
-    nome: string;
-    cpf: number,
+    nome: string,
+    cpf: string,
     dataNascimento: Date,
-    telefone: number,
+    telefone: string,
     email: string,
     ativo: boolean
     
