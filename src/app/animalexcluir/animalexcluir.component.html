@@ -1,9 +1,9 @@
 <H2>Alterar Animal</H2>
 
 <div class="container mt-5">
-  <H2>Alterar Animal</H2>
+  <H2 id="title">Excluir Animal</H2>
   <div class="row">
-  <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="put">
+  <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="post">
 
       <div class="mb-3 mt-3">
         <label for="nome" class="form-label">Nome:</label>
@@ -82,7 +82,7 @@
           <label class="form-check-label">Ativo</label>
         </div>
 
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" id="excluir" class="btn btn-primary">Excluir</button>
     </form>
   </div>
 </div>

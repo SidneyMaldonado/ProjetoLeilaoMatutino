@@ -51,13 +51,8 @@ describe('AnimalService', () => {
 
   it('Test incluir()', ()=>{
 
-<<<<<<< HEAD
     const msg : Mensagem= { mensagem: '', erros: []};
     const animal: Animal =
-=======
-    let msg : Mensagem= { mensagem: '', erros: []};
-    let animal: Animal = 
->>>>>>> dd3ba54 (Ajustes)
       {
         "idAnimal": 3,
         "nome": "BBBBBBBBBBBBBBBB",
@@ -80,7 +75,6 @@ describe('AnimalService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/animal')
     expect(testRequest.request.method).toBe('POST')
     expect(testRequest.request.body.nome).toBe('BBBBBBBBBBBBBBBB')
-<<<<<<< HEAD
     console.log('Mensagem:')
     console.log(testRequest.request.body)
     testRequest.flush(msg)
@@ -89,14 +83,6 @@ describe('AnimalService', () => {
 
   it('Teste buscar()', ()=>{
     const animal: Animal =
-=======
-    testRequest.flush(msg) 
-    
-  });
-
-  it('Teste buscar()', ()=>{
-    let animal: Animal = 
->>>>>>> dd3ba54 (Ajustes)
     {
       "idAnimal": 3,
       "nome": "Boizaoasdasdaasdad",
@@ -120,7 +106,43 @@ describe('AnimalService', () => {
     expect(testRequest.request.method).toBe('GET')
     expect(testRequest.request.responseType).toEqual('json')
     testRequest.flush(animal) 
+    httpTestingController.verify(); 
+  });
+
+  it('alterar()', () => {
+
+    const msg: Mensagem = {
+      mensagem: '',
+      erros: []
+    }
+
+    const animal: Animal =
+    {
+      "idAnimal": 3,
+      "nome": "BOIBUMBABUMBA",
+      "registro": "645897",
+      "preco": 4200.0,
+      "idRaca": 3,
+      "idVendedor": 3,
+      "idComprador": 3,
+      "idMedico": 3,
+      "pesoArroba": 140.0,
+      "idade": 3,
+      "idLeilao": 3,
+      "ativo": true
+    }
+
+    service.alterar(animal).subscribe(
+      dados => expect(dados).toEqual(msg)
+    )
+    
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/animal')
+    expect(testRequest.request.method).toBe('PUT')
+    expect(testRequest.request.responseType).toEqual('json')
+    expect(testRequest.request.body.nome).toBe('BOIBUMBABUMBA')
+    testRequest.flush(msg) 
     httpTestingController.verify();
+
   });
 
 });

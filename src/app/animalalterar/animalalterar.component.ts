@@ -1,9 +1,9 @@
+import { Mensagem } from './../entities/mensagem';
 import { Vendedor } from './../entities/vendedor';
 import { NgForm } from '@angular/forms';
 import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../entities/animal';
-import { Mensagem } from '../entities/mensagem';
 import { Raca } from '../entities/raca';
 import { RacaService } from '../services/raca.service';
 import { ActivatedRoute, Router } from '@angular/router';
