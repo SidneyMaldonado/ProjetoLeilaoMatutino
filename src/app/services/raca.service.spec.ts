@@ -84,28 +84,4 @@ describe('RacaService', () => {
     expect(testRequest.request.method).toBe('GET');
     testRequest.flush(raca);
   });
-
-  it('Test excluir()', () =>{
-
-    const msg: Mensagem = { mensagem: '', erros: []};
-    const raca: Raca = 
-    {
-      "idRaca": 18,
-      "nome": "Red Angus",
-      "descricao": "Boi 300 kg.",
-      "ativo": false
-    }
-
-    service.excluir(raca).subscribe(
-      data => expect(data).toEqual(msg)  
-    )
-
-    const testRequest = httpTestingController.expectOne('http://localhost:8080/raca');
-    expect(testRequest.request.method).toBe('DELETE');
-    expect(testRequest.request.body.nome.idRaca).toBe('Red Angus.18')
-    console.log('Mensagem: ')
-    console.log(testRequest.request.body)
-    testRequest.flush(msg);
-    });
-
 });

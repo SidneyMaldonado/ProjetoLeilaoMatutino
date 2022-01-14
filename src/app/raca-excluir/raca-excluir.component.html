@@ -1,7 +1,7 @@
-<H2>Excluir Raça</H2>
+<H2 id="title">Excluir Raça</H2>
 <div class="container mt-5">
     <div class="row">
-<form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="delete">
+<form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="post">
     
     <div class="mb-3 mt-3">
       <label for="nome" class="form-label">Nome:</label>
@@ -15,7 +15,7 @@
       [(ngModel)]="raca.descricao" readonly>
     </div>
 
-    <button type="submit" class="btn btn-primary">Excluir</button>
+    <button type="submit" id="excluir" class="btn btn-primary">Excluir</button>
   </form>
 </div>
 </div>
