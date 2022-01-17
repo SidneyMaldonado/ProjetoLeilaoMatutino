@@ -23,9 +23,11 @@ describe('VendedorListarComponent', () => {
     fixture.detectChanges();
   });
 
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 
   it('Renderizar html', ()=>{
     const expected: string = 'Lista de Vendedores';

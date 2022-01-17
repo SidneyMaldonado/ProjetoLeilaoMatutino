@@ -19,14 +19,18 @@ describe('VendedorincluirComponent', () => {
     fixture.detectChanges();
   });
 
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
   it('Deve renderizar html', () =>{
     const expected: string = 'Incluir Vendedor';
     const result = fixture.debugElement.nativeElement.querySelector('#title');
     expect(result.innerHTML).toBe(expected)
   });
+
 
   it('Botao Salvar', () => {
     const expected: string = 'Enviar';
