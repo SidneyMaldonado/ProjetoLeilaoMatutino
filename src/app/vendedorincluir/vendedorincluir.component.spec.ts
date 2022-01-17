@@ -1,6 +1,9 @@
+import { VendedorService } from './../services/vendedor.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { VendedorIncluirComponent } from './vendedorincluir.component';
+import { NgForm } from '@angular/forms';
 
 describe('VendedorincluirComponent', () => {
   let component: VendedorIncluirComponent;
@@ -8,7 +11,9 @@ describe('VendedorincluirComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VendedorIncluirComponent ]
+      declarations: [ VendedorIncluirComponent, NgForm ],
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      providers:[VendedorService]
     })
     .compileComponents();
   });
@@ -19,7 +24,7 @@ describe('VendedorincluirComponent', () => {
     fixture.detectChanges();
   });
 
-  
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
