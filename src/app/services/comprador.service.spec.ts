@@ -154,9 +154,8 @@ describe('CompradorService', () => {
     )
     const testRequest = httpTestingController.expectOne('http://localhost:8080/comprador/29');
     expect(testRequest.request.method).toBe('DELETE');
-    expect(testRequest.request.body.nome.idComprador).toBe('Henrique teste')
-    console.log('Mensagem: ')
-    console.log(testRequest.request.body)
+    expect(testRequest.request.responseType).toBe('json');
+    
     testRequest.flush(msg);
   })
 
