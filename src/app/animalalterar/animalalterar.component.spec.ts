@@ -3,7 +3,7 @@ import { AnimalService } from './../services/animal.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AnimalalterarComponent } from './animalalterar.component';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 
 describe('AnimalalterarComponent', () => {
   let component: AnimalalterarComponent;
@@ -12,7 +12,7 @@ describe('AnimalalterarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AnimalalterarComponent, NgForm ],
-      imports:[HttpClientTestingModule, RouterTestingModule],
+      imports:[HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers:[AnimalService]
     })
     .compileComponents();
