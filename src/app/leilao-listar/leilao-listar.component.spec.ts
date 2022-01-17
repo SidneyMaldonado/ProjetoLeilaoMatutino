@@ -31,7 +31,7 @@ describe('LeilaoListarComponent', () => {
   it('deve renderizar página HTML', () => {
     const expected : string = 'Lista de Leilões';
     const result = fixture.debugElement.nativeElement.querySelector('#title');
-    console.log(result.innerHTML);
+    console.log('Leilao listar - Teste');
     expect(result.innerHTML).toEqual(expected);
   });
 });

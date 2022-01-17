@@ -38,6 +38,7 @@ describe('LeilaoincluirComponent', () => {
   it('Botao Salvar', () => {
     const expected: string = 'Enviar';
     const result = fixture.debugElement.nativeElement.querySelector('#salvar');
+    console.log('Leilao incluir - Teste');
     expect(result.innerHTML).toBe(expected)
   })
 
