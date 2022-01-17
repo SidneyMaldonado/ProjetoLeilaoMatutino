@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CompradorService } from './../services/comprador.service';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 
 import { CompradorexcluirComponent } from './compradorexcluir.component';
 
@@ -13,7 +13,7 @@ describe('CompradorexcluirComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CompradorexcluirComponent, NgForm ],
-      imports:[HttpClientTestingModule, RouterTestingModule],
+      imports:[HttpClientTestingModule, , RouterTestingModule, FormsModule],
       providers:[CompradorService]
     })
     .compileComponents();

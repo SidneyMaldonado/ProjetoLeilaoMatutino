@@ -2,7 +2,7 @@ import { CompradorService } from './../services/comprador.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { CompradorIncluirComponent } from './comprador-incluir.component';
 
 describe('CompradorIncluirComponent', () => {
@@ -12,7 +12,7 @@ describe('CompradorIncluirComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CompradorIncluirComponent, NgForm ],
-      imports: [HttpClientTestingModule, RouterTestingModule],
+      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers:[CompradorService]
     })
     .compileComponents();
@@ -39,7 +39,7 @@ describe('CompradorIncluirComponent', () => {
     const result = fixture.debugElement.nativeElement.querySelector('#enviar');
     console.log(result);
     expect(result.innerHTML).toBe(expected)
-  });  
+  });
 
 
 });
