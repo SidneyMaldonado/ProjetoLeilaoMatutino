@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { Leilao } from './../entities/leilao';
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
@@ -10,7 +11,7 @@ describe('LeilaoService', () => {
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule, FormsModule],
       providers:[LeilaoService]
     });
     httpTestingController = TestBed.inject(HttpTestingController);

@@ -1,4 +1,4 @@
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LeilaoService } from './../services/leilao.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -13,7 +13,7 @@ describe('LeilaoalterarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ LeilaoalterarComponent, NgForm ],
-      imports:[HttpClientTestingModule, RouterTestingModule],
+      imports:[HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers: [LeilaoService]
     })
     .compileComponents();
