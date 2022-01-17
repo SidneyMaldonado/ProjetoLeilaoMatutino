@@ -10,7 +10,7 @@ describe('AnimalListarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AnimalListarComponent ],
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule ],
       providers:[AnimalService]
 
     })
