@@ -145,4 +145,36 @@ describe('AnimalService', () => {
 
   });
 
+  
+
+  it('excluir()', () =>{
+
+    const msg: Mensagem = { mensagem: '', erros: []};
+    const animal: Animal =
+    {
+      "idAnimal": 3,
+      "nome": "BOIBUMBABUMBA",
+      "registro": "645897",
+      "preco": 4200.0,
+      "idRaca": 3,
+      "idVendedor": 3,
+      "idComprador": 3,
+      "idMedico": 3,
+      "pesoArroba": 140.0,
+      "idade": 3,
+      "idLeilao": 3,
+      "ativo": true
+    }
+      
+    service.excluir(animal).subscribe(
+      data => expect(data).toEqual(msg)  
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3');
+    expect(testRequest.request.method).toBe('DELETE');
+    expect(testRequest.request.responseType).toBe('JSON');
+    testRequest.flush(msg);
+
+  });
+
 });
