@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { CompradorService } from './../services/comprador.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -10,7 +11,7 @@ describe('CompradorListarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CompradorListarComponent ],
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule, FormsModule],
       providers:[CompradorService]
     })
     .compileComponents();
