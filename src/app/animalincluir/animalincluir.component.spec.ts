@@ -1,4 +1,4 @@
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { AnimalService } from './../services/animal.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -13,7 +13,7 @@ describe('AnimalincluirComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AnimalincluirComponent, NgForm ],
-      imports:[HttpClientTestingModule, RouterTestingModule],
+      imports:[HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers:[AnimalService]
     })
     .compileComponents();
