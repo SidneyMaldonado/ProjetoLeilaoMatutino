@@ -28,4 +28,17 @@ describe('LeilaoincluirComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Deve renderizar html', () =>{
+    const expected: string = 'Incluir Leilão';
+    const result = fixture.debugElement.nativeElement.querySelector('#title');
+    expect(result.innerHTML).toBe(expected)
+  });
+
+  it('Botao Salvar', () => {
+    const expected: string = 'Enviar';
+    const result = fixture.debugElement.nativeElement.querySelector('#salvar');
+    expect(result.innerHTML).toBe(expected)
+  })
+
 });
