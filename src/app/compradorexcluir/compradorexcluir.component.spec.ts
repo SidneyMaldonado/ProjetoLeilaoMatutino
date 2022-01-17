@@ -13,7 +13,7 @@ describe('CompradorexcluirComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CompradorexcluirComponent, NgForm ],
-      imports:[HttpClientTestingModule, , RouterTestingModule, FormsModule],
+      imports:[HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers:[CompradorService]
     })
     .compileComponents();
