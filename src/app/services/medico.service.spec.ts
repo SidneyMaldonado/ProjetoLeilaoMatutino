@@ -156,9 +156,7 @@ describe('MedicoService', () => {
 
       const testRequest = httpTestingController.expectOne('http://localhost:8080/medico/2');
       expect(testRequest.request.method).toBe('DELETE');
-      expect(testRequest.request.body.nome).toBe('Ricardo Serafim 1000')
-      console.log('Mensagem: ')
-      console.log(testRequest.request.body)
+      expect(testRequest.request.responseType).toBe('json');
       testRequest.flush(msg);
 
     });
