@@ -34,17 +34,4 @@ describe('LeilaoListarComponent', () => {
     console.log(result.innerHTML);
     expect(result.innerHTML).toEqual(expected);
   });
-
-  it('Renderizar botao de alterar', () => {
-    const expected: string = 'Alterar';
-    const result = fixture.debugElement.nativeElement.querySelector('#botoes');
-    console.log(fixture.debugElement.nativeElement.querySelector('#botoes'));
-    expect(result.innerHTML).toBe(expect);
-  })
-
-  it('Renderizar botao de excluir', () => {
-    const expected: string = 'Excluir';
-    const result = fixture.debugElement.nativeElement.querySelector('#excluir');
-    expect(result.innerHTML).toBe(expect);
-  })
 });
