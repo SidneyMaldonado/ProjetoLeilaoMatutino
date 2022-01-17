@@ -4,36 +4,36 @@
   <H2 id ="title">Excluir Medicos</H2>
   <div class="row">
 
-    <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="delete">
+    <form  #frm="ngForm" (ngSubmit)="excluir(frm)" method="put">
 
       <div class="mb-3 mt-3">
         <label for="nome" class="form-label">Nome:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" nome="nome"
-        [(ngModel)]="medico.nome" readonly>
+        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome"
+        [(ngModel)]="medico.nome" />
       </div>
 
       <div class="mb-3 mt-3">
         <label for="crmv" class="form-label">CRMV:</label>
         <input type="text" class="form-control" id="crmv" placeholder="Digite o crmv" name="crmv"
-        [(ngModel)]="medico.crmv" readonly>
+        [(ngModel)]="medico.crmv" />
       </div>
 
       <div class="mb-3 mt-3">
         <label for="dataNascimento" class="form-label">Data de nascimento:</label>
         <input type="date" class="form-control" id="dataNascimento" placeholder="Digite a data de nascimento" name="dataNascimento"
-        [(ngModel)]="medico.dataNascimento" readonly>
+        [(ngModel)]="medico.dataNascimento" />
       </div>
 
       <div class="mb-3">
           <label for="telefone" class="form-label">Telefone:</label>
           <input type="text" class="form-control" id="telefone" placeholder="Informe o telefone" name="telefone"
-          [(ngModel)]="medico.telefone"  readonly>
+          [(ngModel)]="medico.telefone"  />
       </div>
 
       <div class="mb-3 mt-3">
         <label for="email" class="form-label">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email"
-        [(ngModel)]="medico.email" readonly>
+        [(ngModel)]="medico.email" />
       </div>
 
       <button type="submit" id="excluir" class="btn btn-danger">Excluir</button>

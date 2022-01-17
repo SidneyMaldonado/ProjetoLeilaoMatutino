@@ -1,7 +1,7 @@
 import { AnimalService } from './../services/animal.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AnimalexcluirComponent } from './animalexcluir.component';
@@ -13,7 +13,7 @@ describe('AnimalexcluirComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AnimalexcluirComponent, NgForm ],
-      imports:[HttpClientTestingModule, RouterTestingModule],
+      imports:[HttpClientTestingModule, RouterTestingModule , FormsModule],
       providers:[AnimalService]
     })
     .compileComponents();

@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { MedicoService } from '../services/medico.service';
 import { MedicoListarComponent } from './medico-listar.component';
 
@@ -10,7 +11,7 @@ describe('MedicoListarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers:[MedicoService],
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule, FormsModule],
       declarations: [ MedicoListarComponent ]
     })
 
