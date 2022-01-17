@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { RacaService } from '../services/raca.service';
 
 import { RacaListarComponent } from './raca-listar.component';
@@ -11,7 +12,7 @@ describe('RacaListarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ RacaListarComponent ],
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, FormsModule],
       providers: [RacaService]
     })
     .compileComponents();
