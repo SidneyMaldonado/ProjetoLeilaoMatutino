@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { VendedorService } from '../services/vendedor.service';
 
@@ -14,7 +14,7 @@ describe('VendedorexcluirComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ VendedorexcluirComponent, NgForm],
       providers:[VendedorService],
-      imports: [HttpClientTestingModule, RouterTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule]
     })
     .compileComponents();
   });

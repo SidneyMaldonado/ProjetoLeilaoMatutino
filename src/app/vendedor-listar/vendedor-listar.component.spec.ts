@@ -1,5 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 import { VendedorService } from '../services/vendedor.service';
 
 import { VendedorListarComponent } from './vendedor-listar.component';
@@ -11,7 +13,7 @@ describe('VendedorListarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ VendedorListarComponent ],
-      imports:[HttpClientTestingModule],
+      imports:[HttpClientTestingModule, RouterTestingModule, FormsModule],
       providers:[VendedorService]
     })
     .compileComponents();
