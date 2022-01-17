@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MedicoService } from '../services/medico.service';
 import { MedicoincluirComponent } from './medicoincluir.component';
@@ -11,7 +11,7 @@ describe('MedicoincluirComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports:[HttpClientTestingModule,RouterTestingModule],
+      imports:[HttpClientTestingModule,RouterTestingModule, FormsModule],
       providers:[MedicoService],
       declarations: [ MedicoincluirComponent, NgForm]
     })
