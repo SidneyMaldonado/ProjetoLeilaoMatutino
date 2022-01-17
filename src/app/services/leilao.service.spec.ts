@@ -79,9 +79,10 @@ describe('LeilaoService', () => {
     service.buscar(leilao.idLeilao+"").subscribe(
       data => expect(data).toEqual(leilao)
     )
-    const testRequest = httpTestingController.match('http://localhost:8080/leilao/3');
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao/3');
     console.log('Leilao Service - Teste de busca')
-    console.log(testRequest.values);
+    expect(testRequest.request.method).toBe('GET')
+    expect(testRequest.request.responseType).toEqual('json')
   });
 
   // -------------TESTE ALTERAR------------------
