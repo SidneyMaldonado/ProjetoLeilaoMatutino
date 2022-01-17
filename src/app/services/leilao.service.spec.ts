@@ -8,7 +8,7 @@ describe('LeilaoService', () => {
   let service: LeilaoService;
   let httpTestingController: HttpTestingController;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       imports:[HttpClientTestingModule],
       providers:[LeilaoService]
@@ -62,10 +62,10 @@ describe('LeilaoService', () => {
     expect(testRequest.request.method).toBe('POST')
     expect(testRequest.request.body.nome).toBe('DER Leiloes')
     testRequest.flush(msg)
-  })
+  });
 
   // -------------TESTE BUSCAR------------------
-  it('Teste buscar()'), () =>{
+  it('Teste buscar()', () => {
     const date = new Date('2021-12-20T04:00:00.000+00:00');
     const leilao : Leilao = {
       "idLeilao": 3,
@@ -73,16 +73,16 @@ describe('LeilaoService', () => {
       "descricao": "Leilao de bois nelores",
       "data": date,
       "ativo": true
-    }
+    };
 
     service.buscar(leilao.idLeilao+"").subscribe(
       data => expect(data).toEqual(leilao)
     )
     const testRequest = httpTestingController.match('http://localhost:8080/leilao/3');
     console.log(testRequest.values);
-  }
+  });
 
-  it('Teste de alterar'), () => {
+  it('Teste de alterar', () => {
     const msg: Mensagem = {
       mensagem: '',
       erros: []
@@ -105,6 +105,29 @@ describe('LeilaoService', () => {
     expect(testRequest.request.method).toBe('PUT');
     expect(testRequest.request.body.nome).toBe('DER Leiloes');
     expect(testRequest.request.responseType).toBe('json');
-    testRequest.flush(msg)
-  }
+    testRequest.flush(msg);
+  });
+
+  it('excluir()', () =>{
+
+    const msg: Mensagem = { mensagem: '', erros: []};
+    const leilao: Leilao = {
+      idLeilao: 3,
+      nome: '',
+      descricao: '',
+      data: new Date(),
+      ativo: false
+    }
+
+
+    service.excluir(leilao).subscribe(
+      data => expect(data).toEqual(msg)
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao/3');
+    expect(testRequest.request.method).toBe('DELETE');
+    expect(testRequest.request.responseType).toBe('json');
+    testRequest.flush(msg);
+
+  });
 });

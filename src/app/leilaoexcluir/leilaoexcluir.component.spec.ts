@@ -35,7 +35,7 @@ describe('LeilaoexcluirComponent', () => {
     expect(result.innerHTML).toEqual(expected);
   });
 
-  it('Botao Enviar', () => {
+  it('Botao Excluir', () => {
     const expected: string = 'Excluir';
     const result = fixture.debugElement.nativeElement.querySelector('#excluir');
     expect(result.innerHTML).toBe(expected)
