@@ -172,7 +172,7 @@ describe('AnimalService', () => {
 
     const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3');
     expect(testRequest.request.method).toBe('DELETE');
-    expect(testRequest.request.responseType).toBe('JSON');
+    expect(testRequest.request.responseType).toBe('json');
     testRequest.flush(msg);
 
   });
