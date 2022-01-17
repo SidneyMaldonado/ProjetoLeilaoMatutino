@@ -93,13 +93,12 @@ describe('VendedorService', () => {
 
   });
 
-  it('Teste alterar()', () => {
+  it('Test Alterar()', () => {
 
     const msg: Mensagem = {
       mensagem: '',
       erros: []
     }
-
     const vendedor: Vendedor = 
     {
       "idVendedor": 2,
@@ -111,18 +110,20 @@ describe('VendedorService', () => {
       "ativo": true
     }
 
-    service.alterar(vendedor).subscribe( dados => expect(dados).toEqual(msg))
-
+    service.alterar(vendedor).subscribe(
+      dados => expect(dados).toEqual(msg)
+    )
+    
     const testRequest = httpTestingController.expectOne('http://localhost:8080/vendedor')
     expect(testRequest.request.method).toBe('PUT')
+    expect(testRequest.request.responseType).toEqual('json')
     expect(testRequest.request.body.nome).toBe('Murilo Manuel Martins')
-    console.log('Mensagem: ')
-    console.log(testRequest.request.body)
-    testRequest.flush(msg)
+    testRequest.flush(msg) 
+    httpTestingController.verify();
 
   });
 
-  it('Test excluir()', () =>{
+  it('Test Excluir()', () =>{
 
     const msg: Mensagem = { mensagem: '', erros: []};
     const vendedor: Vendedor = 
@@ -143,9 +144,9 @@ describe('VendedorService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/vendedor/2');
     expect(testRequest.request.method).toBe('DELETE');
     expect(testRequest.request.responseType).toBe('json');
-
     testRequest.flush(msg);
 
   });
+
   
 });
