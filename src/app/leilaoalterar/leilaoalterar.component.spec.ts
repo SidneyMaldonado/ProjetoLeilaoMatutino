@@ -39,7 +39,7 @@ describe('LeilaoalterarComponent', () => {
   it('botao alterar', () => {
     const expected : string = 'Enviar';
     const result = fixture.debugElement.nativeElement.querySelector('#salvar');
-    console.log(result.innerHTML);
+    console.log('Leilao Alterar - Teste');
     expect(result.innerHTML).toEqual(expected);
   })
 });

@@ -26,12 +26,11 @@ describe('AnimalListarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
+
 
   it('Renderizar html', ()=>{
     const expected: string = 'Lista de Animais';
     const result = fixture.debugElement.nativeElement.querySelector('#title');
     expect(result.innerHTML).toBe(expected);
   });
-
 });

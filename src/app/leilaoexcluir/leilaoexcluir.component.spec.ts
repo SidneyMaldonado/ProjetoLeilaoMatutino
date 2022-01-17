@@ -31,11 +31,11 @@ describe('LeilaoexcluirComponent', () => {
   it('deve renderizar página HTML', () => {
     const expected : string = 'Excluir Leilão';
     const result = fixture.debugElement.nativeElement.querySelector('#title');
-    console.log(result.innerHTML);
+    console.log('Leilao excluir - Teste');
     expect(result.innerHTML).toEqual(expected);
   });
 
-  it('Botao Enviar', () => {
+  it('Botao Excluir', () => {
     const expected: string = 'Excluir';
     const result = fixture.debugElement.nativeElement.querySelector('#excluir');
     expect(result.innerHTML).toBe(expected)

@@ -8,7 +8,7 @@ describe('LeilaoService', () => {
   let service: LeilaoService;
   let httpTestingController: HttpTestingController;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       imports:[HttpClientTestingModule],
       providers:[LeilaoService]
@@ -61,11 +61,12 @@ describe('LeilaoService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao')
     expect(testRequest.request.method).toBe('POST')
     expect(testRequest.request.body.nome).toBe('DER Leiloes')
+    console.log('Leilao Service - Teste de inclusão')
     testRequest.flush(msg)
-  })
+  });
 
   // -------------TESTE BUSCAR------------------
-  it('Teste buscar()'), () =>{
+  it('Teste buscar()', () => {
     const date = new Date('2021-12-20T04:00:00.000+00:00');
     const leilao : Leilao = {
       "idLeilao": 3,
@@ -73,16 +74,18 @@ describe('LeilaoService', () => {
       "descricao": "Leilao de bois nelores",
       "data": date,
       "ativo": true
-    }
+    };
 
     service.buscar(leilao.idLeilao+"").subscribe(
       data => expect(data).toEqual(leilao)
     )
     const testRequest = httpTestingController.match('http://localhost:8080/leilao/3');
+    console.log('Leilao Service - Teste de busca')
     console.log(testRequest.values);
-  }
+  });
 
-  it('Teste de alterar'), () => {
+  // -------------TESTE ALTERAR------------------
+  it('Teste de alterar', () => {
     const msg: Mensagem = {
       mensagem: '',
       erros: []
@@ -105,6 +108,31 @@ describe('LeilaoService', () => {
     expect(testRequest.request.method).toBe('PUT');
     expect(testRequest.request.body.nome).toBe('DER Leiloes');
     expect(testRequest.request.responseType).toBe('json');
-    testRequest.flush(msg)
-  }
+    console.log('Leilao Service - Teste de alteracao')
+    testRequest.flush(msg);
+  });
+
+  // -------------TESTE EXCLUIR------------------
+  it('excluir()', () =>{
+
+    const msg: Mensagem = { mensagem: '', erros: []};
+    const leilao: Leilao = {
+      idLeilao: 3,
+      nome: 'Mil Tec Leiloes',
+      descricao: 'eilao de bois nelores',
+      data: new Date(),
+      ativo: true
+    }
+
+    service.excluir(leilao).subscribe(
+      data => expect(data).toEqual(msg)
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/leilao/3');
+    expect(testRequest.request.method).toBe('DELETE');
+    expect(testRequest.request.responseType).toBe('json');
+    console.log('Leilao Service - Teste de exclusão')
+    testRequest.flush(msg);
+
+  });
 });

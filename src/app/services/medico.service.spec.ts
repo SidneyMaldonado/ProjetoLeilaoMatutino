@@ -29,7 +29,7 @@ describe('MedicoService', () => {
 
   it('Teste listar()', () => {
 
-    const medico: Medico [] = 
+    const medico: Medico [] =
     [
 
       {
@@ -42,24 +42,24 @@ describe('MedicoService', () => {
         "ativo": true
       }   ]
 
-     service.listar().subscribe(data => { 
+     service.listar().subscribe(data => {
      expect(data).toEqual(medico);
 
      })
-     
+
      const testRequest = httpTestingController.expectOne('http://localhost:8080/medico');
      expect(testRequest.request.method).toBe('GET');
      testRequest.flush(medico);
 
    });
-   
+
    it('Test incluir()', () =>{
 
 
     const msg : Mensagem= {mensagem: '', erros:[]};
-    const medico: Medico = 
+    const medico: Medico =
     {
-      
+
         "idMedico": 2,
         "nome": "Ricardo Serafim 1000",
         "crmv": 13441,
@@ -93,7 +93,7 @@ describe('MedicoService', () => {
         "email": "henriquelopes@artedaserra.com.br",
         "ativo": true
       }
-      
+
         service.buscar('2').subscribe(data => expect(data).toEqual(medico))
 
         const testRequest = httpTestingController.expectOne('http://localhost:8080/medico/2')
@@ -139,7 +139,7 @@ describe('MedicoService', () => {
     it('Test excluir()', () =>{
 
       const msg: Mensagem = { mensagem: '', erros: []};
-      const medico: Medico = 
+      const medico: Medico =
       {
         "idMedico": 2,
         "nome": "Ricardo Serafim 1000",
@@ -149,11 +149,11 @@ describe('MedicoService', () => {
         "email": "henriquelopes@artedaserra.com.br",
         "ativo": true
       }
-        
+
       service.excluir(medico).subscribe(
-        data => expect(data).toEqual(msg)  
+        data => expect(data).toEqual(msg)
       )
-  
+
       const testRequest = httpTestingController.expectOne('http://localhost:8080/medico/2');
       expect(testRequest.request.method).toBe('DELETE');
       expect(testRequest.request.body.nome).toBe('Ricardo Serafim 1000')

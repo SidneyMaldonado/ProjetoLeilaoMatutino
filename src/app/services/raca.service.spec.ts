@@ -3,7 +3,6 @@ import { TestBed } from '@angular/core/testing';
 import { ConnectableObservable } from 'rxjs';
 import { Mensagem } from '../entities/mensagem';
 import { Raca } from '../entities/raca';
-
 import { RacaService } from './raca.service';
 
 describe('RacaService', () => {
@@ -84,4 +83,56 @@ describe('RacaService', () => {
     expect(testRequest.request.method).toBe('GET');
     testRequest.flush(raca);
   });
+
+  it('Test Alterar()', () => {
+
+    const msg: Mensagem = {
+      mensagem: '',
+      erros: []
+    }
+
+    const raca: Raca = 
+    {
+      "idRaca": 18,
+      "nome": "Red Angus",
+      "descricao": "Boi 300 kg.",
+      "ativo": true
+    }
+
+    service.alterar(raca).subscribe(
+      dados => expect(dados).toEqual(msg)
+    )
+    
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/raca')
+    expect(testRequest.request.method).toBe('PUT')
+    expect(testRequest.request.responseType).toEqual('json')
+    expect(testRequest.request.body.nome).toBe('Red Angus')
+    testRequest.flush(msg) 
+    httpTestingController.verify();
+
+  });
+
+  it('Test Excluir()', () =>{
+
+    const msg: Mensagem = { mensagem: '', erros: []};
+    const raca: Raca = 
+    {
+      "idRaca": 18,
+      "nome": "Red Angus",
+      "descricao": "Boi 300 kg.",
+      "ativo": true
+    }
+      
+    service.excluir(raca).subscribe(
+      data => expect(data).toEqual(msg)  
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/raca/18');
+    expect(testRequest.request.method).toBe('DELETE');
+    expect(testRequest.request.responseType).toBe('json');
+    testRequest.flush(msg);
+
+  });
+
+
 });

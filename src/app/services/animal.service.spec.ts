@@ -105,8 +105,8 @@ describe('AnimalService', () => {
     const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3')
     expect(testRequest.request.method).toBe('GET')
     expect(testRequest.request.responseType).toEqual('json')
-    testRequest.flush(animal) 
-    httpTestingController.verify(); 
+    testRequest.flush(animal)
+    httpTestingController.verify();
   });
 
   it('alterar()', () => {
@@ -135,13 +135,45 @@ describe('AnimalService', () => {
     service.alterar(animal).subscribe(
       dados => expect(dados).toEqual(msg)
     )
-    
+
     const testRequest = httpTestingController.expectOne('http://localhost:8080/animal')
     expect(testRequest.request.method).toBe('PUT')
     expect(testRequest.request.responseType).toEqual('json')
     expect(testRequest.request.body.nome).toBe('BOIBUMBABUMBA')
-    testRequest.flush(msg) 
+    testRequest.flush(msg)
     httpTestingController.verify();
+
+  });
+
+
+
+  it('excluir()', () =>{
+
+    const msg: Mensagem = { mensagem: '', erros: []};
+    const animal: Animal =
+    {
+      "idAnimal": 3,
+      "nome": "BOIBUMBABUMBA",
+      "registro": "645897",
+      "preco": 4200.0,
+      "idRaca": 3,
+      "idVendedor": 3,
+      "idComprador": 3,
+      "idMedico": 3,
+      "pesoArroba": 140.0,
+      "idade": 3,
+      "idLeilao": 3,
+      "ativo": true
+    }
+
+    service.excluir(animal).subscribe(
+      data => expect(data).toEqual(msg)
+    )
+
+    const testRequest = httpTestingController.expectOne('http://localhost:8080/animal/3');
+    expect(testRequest.request.method).toBe('DELETE');
+    expect(testRequest.request.responseType).toBe('json');
+    testRequest.flush(msg);
 
   });
 
